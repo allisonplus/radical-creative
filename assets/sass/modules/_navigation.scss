@@ -6,6 +6,7 @@
 
 a {
 	color: $color-link;
+	text-decoration: none;
 
 	&:visited {
 		color: $color-link-visited;
@@ -22,6 +23,8 @@ a {
 
 .menu {
 	@include list-reset;
+
+	text-align: center;
 
 	li {
 		margin: 0 rem(10) 0 0;
@@ -98,7 +101,8 @@ a {
 
 		// Menu items
 		li {
-			float: left;
+			// float: left;
+			display: inline-block;
 			position: relative;
 
 			&:hover > a,
