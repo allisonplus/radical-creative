@@ -1,3 +1,22 @@
 //--------------------------------------------------------------
 // Footer
 //--------------------------------------------------------------
+.footer {
+
+	// Widget area in footer.
+	&.widget-area {
+		display: flex;
+		justify-content: space-between;
+
+		// Any components within footer (into thirds).
+		> div,
+		> aside {
+			width: calc((100% / 3 - (2*15px));
+		} // > div, > aside
+
+		// Titles of footer widgets.
+		.widget-title {
+			margin-top: 0;
+		} // .widget-title
+	} // &.widget-area
+} // .footer
