@@ -75,4 +75,4 @@ $color-text-screen-reader: $color-blue;
 // Links
 $color-link: $color-blue;
 $color-link-visited: $color-blue;
-$color-link-hover: $color-blue;
+$color-link-hover: darken($color-link, 15%);
