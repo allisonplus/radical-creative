@@ -22,6 +22,8 @@
 			<div class="site-info">
 				<?php rcs_do_copyright_text(); ?>
 			</div>
+
+			<?php echo rcs_get_footer_social_links(); ?>
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
