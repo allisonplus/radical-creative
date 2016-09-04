@@ -15,11 +15,13 @@
 
 	<footer class="site-footer">
 		<div class="wrap">
+			<aside class="widget-area footer" role="complementary">
+				 <?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</aside>
 
 			<div class="site-info">
 				<?php rcs_do_copyright_text(); ?>
 			</div>
-
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
