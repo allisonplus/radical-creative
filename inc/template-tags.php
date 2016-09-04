@@ -337,7 +337,7 @@ function rcs_do_copyright_text() {
 	}
 
 	// Echo the text.
-	echo '<span class="copyright-text">' . wp_kses_post( $copyright_text ) . '</span>';
+	echo '<span class="copyright-text">	&#169;' . date('Y') . ' ' . wp_kses_post( $copyright_text ) . '</span>';
 }
 
 /**
