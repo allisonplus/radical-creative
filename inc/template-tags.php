@@ -418,12 +418,23 @@ function rcs_do_mobile_navigation_menu() {
 function rcs_get_footer_social_links() {
 
 	// Set an array of social networks.
-	$social_networks = array( 'facebook', 'instagram', 'email', );
+	$social_networks = array( 'facebook', 'instagram', 'RSS' );
+	$email = get_theme_mod( 'rcs_email_link' );
 
 	ob_start(); ?>
 
 	<ul class="social-networks">
 
+	<?php // If there's no email, don't make this <li> in the first place .?>
+	<?php if (!empty($email)) : ?>
+		<li class="social-network email">
+			<a href="mailto:<?php echo esc_url( $email ); ?>">
+				<?php echo rcs_get_svg( array( 'icon' => 'email-square', '' ) ); ?>
+			</a>
+		</li>
+	<?php endif; ?>
+
+	<?php // Continue <li>'s with rest of social networks provided. ?>
 	<?php foreach ( $social_networks as $network ) : ?>
 		<li class="social-network <?php echo $network; ?>">
 			<a href="<?php echo esc_url( get_theme_mod( 'rcs_' . $network . '_link' ) ); ?>">
