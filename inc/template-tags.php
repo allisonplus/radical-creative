@@ -411,3 +411,27 @@ function rcs_do_mobile_navigation_menu() {
 	</nav>
 <?php
 }
+
+/**
+ * Social links for the footer.
+ */
+function rcs_get_footer_social_links() {
+
+	// Set an array of social networks.
+	$social_networks = array( 'facebook', 'instagram', 'email', );
+
+	ob_start(); ?>
+
+	<ul class="social-networks">
+
+	<?php foreach ( $social_networks as $network ) : ?>
+		<li class="social-network <?php echo $network; ?>">
+			<a href="<?php echo esc_url( get_theme_mod( 'rcs_' . $network . '_link' ) ); ?>">
+				<?php echo rcs_get_svg( array( 'icon' => $network . '-square', 'title' => $network . '' ) ); ?>
+			</a>
+		</li>
+	<?php endforeach; ?>
+	</ul><!-- .social-networks -->
+	<?php
+	return ob_get_clean();
+}
