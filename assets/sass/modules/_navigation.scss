@@ -24,7 +24,7 @@ a {
 .menu {
 	@include list-reset;
 
-	text-align: center;
+	text-align: left;
 
 	li {
 		margin: 0 rem(10) 0 0;
