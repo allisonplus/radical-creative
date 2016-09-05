@@ -4,6 +4,18 @@
 
 .blog {
 
+	// Overwrites default for primary section on other pagse.
+	.primary {
+		float: none;
+		margin: 0 auto;
+		max-width: rem(900);
+		width: 100%;
+
+		&:last-child {
+			margin-right: auto;
+		} // &:last-child
+	} // .primary
+
 	// Title of posts.
 	.entry-title {
 		margin: 0;
@@ -13,4 +25,64 @@
 	.cat-links {
 		margin-right: rem(4);
 	} // .cat-links
+} // .blog
+
+
+//--------------------------------------------------------------
+// Sliding effect of blog sidebar
+//--------------------------------------------------------------
+.blog {
+
+	// Trigger for sidebar sliding out.
+	.sliding-panel-button {
+		float: right;
+		font-size: rem(25);
+	} // .sliding-panel-button
+
+	// Blog sidebar.
+	.secondary {
+		width: 100%;
+	} // .secondary
+
+	.sidebar-wrapper {
+
+		// Content of wrapper.
+		&.sliding-panel-content {
+			@include position(fixed, 0 0 0 auto);
+			@include size(85% 100%);
+
+			-webkit-overflow-scrolling: touch;
+			overflow-y: auto;
+			transform: translateX(100%);
+			-webkit-transform: translateX(100%); // fixes on Safari 8
+			transition: all 0.25s linear;
+			z-index: 999999;
+
+			// Change that width as screens get bigger.
+			@include media($tablet-portrait) {
+				@include size(50% 100%);
+			}
+
+			@include media($tablet-landscape) {
+				@include size(30% 100%);
+			}
+
+			// Make it appear!
+			&.is-visible {
+				transform: translateX(0);
+				-webkit-transform: translateX(0); // fixes on Safari 8
+			} // &.is-visible
+		} // .sliding-panel-content
+	} // .sidebar-wrapper
+
+	.primary {
+		height: 100%;
+		transition: all 0.25s linear;
+		width: 100%;
+
+		&.is-visible {
+			-webkit-transform: translate3d(-30%,0,0);
+			transform: translate3d(-30%,0,0);
+		} // &.is-visible
+	} // .primary
 } // .blog
