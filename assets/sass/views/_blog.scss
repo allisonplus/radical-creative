@@ -4,17 +4,30 @@
 
 .blog {
 
+	// Site content.
+	.site-main {
+		position: relative;
+	} // .site-main
+
 	// Overwrites default for primary section on other pagse.
 	.primary {
 		float: none;
+		height: 100%;
 		margin: 0 auto;
 		max-width: rem(900);
+		transition: all 0.25s linear;
 		width: 100%;
 
 		&:last-child {
 			margin-right: auto;
 		} // &:last-child
 	} // .primary
+
+
+	// Blog sidebar.
+	.secondary {
+		width: 100%;
+	} // .secondary
 
 	// Title of posts.
 	.entry-title {
@@ -35,16 +48,20 @@
 
 	// Trigger for sidebar sliding out.
 	.sliding-panel-button {
-		float: right;
+		@include position(absolute, rem(-10) 0 null null);
+
 		font-size: rem(25);
 	} // .sliding-panel-button
 
-	// Blog sidebar.
-	.secondary {
-		width: 100%;
-	} // .secondary
-
+	// Wrapper around sidebar as a whole.
 	.sidebar-wrapper {
+		padding: rem(80) 0;
+		position: relative;
+
+		// Close button once it slides out.
+		.sliding-panel-close {
+			@include position(absolute, 0 0 null null);
+		}
 
 		// Content of wrapper.
 		&.sliding-panel-content {
@@ -75,10 +92,8 @@
 		} // .sliding-panel-content
 	} // .sidebar-wrapper
 
+	// Move primary content over as well when sidebar slides out.
 	.primary {
-		height: 100%;
-		transition: all 0.25s linear;
-		width: 100%;
 
 		&.is-visible {
 			-webkit-transform: translate3d(-30%,0,0);
