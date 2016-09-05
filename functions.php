@@ -43,6 +43,7 @@ function rcs_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'blog', 830, 374 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
