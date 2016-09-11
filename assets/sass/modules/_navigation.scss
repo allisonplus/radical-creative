@@ -135,6 +135,12 @@ a {
 		display: block;
 	}
 
+	.blog & {
+		float: none;
+		margin: 0 auto;
+		max-width: rem(900);
+	} // .blog &
+
 	// Menu area
 	ul {
 		display: none;

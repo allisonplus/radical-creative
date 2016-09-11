@@ -1,7 +1,6 @@
 //--------------------------------------------------------------
 // Blog Template
 //--------------------------------------------------------------
-
 .blog {
 
 	// Site content.
@@ -23,7 +22,6 @@
 		} // &:last-child
 	} // .primary
 
-
 	// Blog sidebar.
 	.secondary {
 		width: 100%;
@@ -33,6 +31,11 @@
 	.entry-title {
 		margin: 0;
 	} // .entry-title
+
+	// Content of entry to match image.
+	.entry-content {
+		max-width: rem(830);
+	} // .entry-content
 
 	// Category links
 	.cat-links {
