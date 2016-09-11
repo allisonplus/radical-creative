@@ -6,12 +6,21 @@
 	// Widget area in footer.
 	&.widget-area {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
+
+		@include media($tablet-landscape) {
+			flex-direction: row;
+		}
 
 		// Any components within footer (into thirds).
 		> div,
 		> aside {
-			width: calc((100% / 3 - (2*15px));
+			width: 100%;
+
+			@include media($tablet-landscape) {
+				width: calc((100% / 3 - (2*15px));
+			}
 		} // > div, > aside
 
 		// Titles of footer widgets.
