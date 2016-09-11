@@ -16,7 +16,7 @@
 	<footer class="site-footer">
 		<div class="wrap">
 			<aside class="widget-area footer" role="complementary">
-				 <?php dynamic_sidebar( 'sidebar-2' ); ?>
+				 <?php dynamic_sidebar( 'sidebar-3' ); ?>
 			</aside>
 
 			<div class="site-info">

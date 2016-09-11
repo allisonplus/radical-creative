@@ -30,7 +30,8 @@ get_header(); ?>
 		<div class="sidebar-wrapper sliding-panel-content">
 			<a class=" sliding-panel-close" href="javascript.void();">&#10005;</a>
 
-			<?php get_sidebar( 'sidebar-1' ); ?>
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+
 		</div> <!--/.sidebar-wrapper-->
 	</div><!-- .wrap -->
 
