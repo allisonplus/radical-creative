@@ -19,6 +19,16 @@ a {
 	}
 }
 
+// Read more link.
+.more-link {
+	border-radius: rem(10);
+	border: rem(2) solid $color-link;
+	display: block;
+	max-width: rem(105);
+	padding: rem(4);
+	text-align: center;
+} // .more-link
+
 // Default menu (active after a fresh WordPress install)
 
 .menu {
