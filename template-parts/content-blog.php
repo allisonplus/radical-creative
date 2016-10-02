@@ -21,7 +21,13 @@
 	<div class="entry-content">
 
 		<?php
-			the_content();
+			echo rcs_get_the_excerpt( $args = array(
+				// 'length' => 10,
+				// 'more'   => wds_rcs_excerpt_more()
+				) );
+			// echo wds_rcs_excerpt_more($more);
+			//
+			// var_dump($more);
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rcs' ),
