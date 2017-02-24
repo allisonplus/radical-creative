@@ -5,4 +5,11 @@
 
 .home {
 
-}
+	.featured-list {
+		@include list-reset;
+
+		.featured-slide {
+			width: calc(100% / 4);
+		} // .featured-slide
+	} // featured-list
+} // .home

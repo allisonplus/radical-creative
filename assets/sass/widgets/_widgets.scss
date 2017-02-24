@@ -8,8 +8,17 @@
 	// Make sure select elements fit in widgets
 	select {
 		max-width: 100%;
-	}
-}
+	} // select
+} // .widget
+
+// Secondary + Widget Area
+.widget-area {
+
+	// Widget title.
+	.widget-title {
+		margin-top: 0;
+	} // .widget-title
+} // .widget-area
 
 // Search widget
 

@@ -501,7 +501,7 @@ function rcs_get_homepage_services_repeater() {
 
 	<?php if ( have_rows( 'featured_service', 'options' ) ) : ?>
 
-		<ul class="slides">
+		<ul class="featured-list">
 
 		<?php while ( have_rows( 'featured_service', 'options' ) ) : the_row();
 
@@ -510,7 +510,7 @@ function rcs_get_homepage_services_repeater() {
 			$page_link = get_sub_field( 'page_link' );
 			?>
 
-			<li class="slide">
+			<li class="featured-slide">
 
 				<?php if ( $page_link ) : ?>
 					<a href="<?php echo esc_url( $page_link ); ?>">
