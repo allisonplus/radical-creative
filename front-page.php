@@ -17,7 +17,7 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/content', 'page' );
 
-					echo rcs_get_homepage_services_repeater();
+					echo rcs_get_homepage_services_repeater(); // WPCS: XSS OK.
 
 				endwhile; // End of the loop.
 				?>
