@@ -526,11 +526,15 @@ function rcs_newsletter() {
 
 /**
  * Create shortcode for MadMini newsletter.
+ *
+ * @param string $passed_values --The title you'd like for the newsletter.
  */
-function rcs_newsletter_shortcode() {
+function rcs_newsletter_shortcode( $passed_values ) {
 
-	// Newsletter markup.
-	return rcs_newsletter();
+	$attributes = shortcode_atts( array(
+		'title' => 'I\'d love to write to you',
+	), $passed_values );
 
+	return "<div class='rcs-newsletter'><h3>" . $attributes['title'] . '</h3>' . rcs_newsletter() . '</div>';
 }
 add_shortcode( 'rcs_newsletter', 'rcs_newsletter_shortcode' );
