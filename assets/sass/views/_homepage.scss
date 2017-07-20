@@ -5,17 +5,34 @@
 
 	// Featured Work list.
 	.featured-work {
-		@include list-reset;
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		@include media($phone-landscape) {
+			justify-content: space-between;
+		}
+
+		&:after {
+			// content: none;
+		}
 
 		// Single Work module.
 		.featured-work-single {
 			display: flex;
 			flex-direction: column;
 			margin: $gutter * 2 0;
+			width: 100%;
+
+			@include media($phone-landscape) {
+				width: calc((100% / 2) - 2 * 8px);
+			}
 
 			@include media($tablet-landscape) {
-				align-items: center;
 				flex-direction: row;
+				width: 100%;
 			}
 
 			// <img>
@@ -30,18 +47,22 @@
 
 			// Title.
 			.work-title {
+				line-height: 1;
 				margin: 0;
 			} // .work-title
 
 			// Subtitle.
 			.work-subtitle {
-				margin-top: 0;
+				margin: rem(12) 0;
 			}
 
 			// (Content) Title + subtitle + Excerpt.
 			.featured-work-content {
 				flex: 1;
-				margin-left: rem(26);
+
+				@include media($tablet-landscape) {
+					margin-left: rem(26);
+				}
 
 				p:last-of-type {
 					margin-bottom: 0;
