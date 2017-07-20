@@ -44,6 +44,7 @@ if ( ! function_exists( 'rcs_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'blog', 830, 374 );
+		add_image_size( 'featured-size', 450, 300, array( 'center', 'center' ), false );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
