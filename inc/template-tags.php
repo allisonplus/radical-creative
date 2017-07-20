@@ -492,3 +492,45 @@ function rcs_get_writing_meta_data() {
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 }
+
+
+/**
+ * Create markup for MadMini newsletter.
+ */
+function rcs_newsletter() {
+
+	ob_start(); ?>
+
+	<form accept-charset="UTF-8" action="https://madmimi.com/signups/subscribe/51392" id="ema_signup_form" method="post" target="_blank">
+		<div style="margin:0;padding:0;display:inline">
+			<input name="utf8" type="hidden" value="✓"/>
+		</div>
+		<div class="mimi_field">
+			<label for="signup_name">Name</label>
+			<br/>
+			<input id="signup_name" name="signup[name]" type="text" data-required-field="This field is required"/>
+		</div>
+		<div class="mimi_field required">
+			<label for="signup_email">Email*</label>
+			<br/>
+			<input id="signup_email" name="signup[email]" type="text" data-required-field="This field is required" placeholder="you@example.com"/>
+		</div>
+		<div class="mimi_field">
+			<input type="submit" class="submit" value="Subscribe" id="webform_submit_button" data-default-text="Subscribe" data-submitting-text="Sending..." data-invalid-text="↑ You forgot some required fields" data-choose-list="↑ Choose a list" data-thanks="Thank you!"/>
+		</div>
+	</form>
+
+	<?php return ob_get_clean();
+
+}
+
+/**
+ * Create shortcode for MadMini newsletter.
+ */
+function rcs_newsletter_shortcode() {
+
+	// Newsletter markup.
+	return rcs_newsletter();
+
+}
+add_shortcode( 'rcs_newsletter', 'rcs_newsletter_shortcode' );
