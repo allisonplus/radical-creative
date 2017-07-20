@@ -1,15 +1,52 @@
 //--------------------------------------------------------------
 // Homepage Template
 //--------------------------------------------------------------
-
-
 .home {
 
-	.featured-list {
+	// Featured Work list.
+	.featured-work {
 		@include list-reset;
 
-		.featured-slide {
-			width: calc(100% / 4);
-		} // .featured-slide
-	} // featured-list
+		// Single Work module.
+		.featured-work-single {
+			display: flex;
+			flex-direction: column;
+			margin: $gutter * 2 0;
+
+			@include media($tablet-landscape) {
+				align-items: center;
+				flex-direction: row;
+			}
+
+			// <img>
+			.featured-work-img-wrapper {
+
+				// <img> link.
+				a {
+					display: inline-block;
+					font-size: 0;
+				} // a
+			} // featured-work-img-wrapper
+
+			// Title.
+			.work-title {
+				margin: 0;
+			} // .work-title
+
+			// Subtitle.
+			.work-subtitle {
+				margin-top: 0;
+			}
+
+			// (Content) Title + subtitle + Excerpt.
+			.featured-work-content {
+				flex: 1;
+				margin-left: rem(26);
+
+				p:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		} // .featured-work-single
+	} // featured-work
 } // .home
