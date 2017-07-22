@@ -15,10 +15,6 @@
 			justify-content: space-between;
 		}
 
-		&:after {
-			// content: none;
-		}
-
 		// Single Work module.
 		.featured-work-single {
 			display: flex;
@@ -54,6 +50,10 @@
 			// Subtitle.
 			.work-subtitle {
 				margin: rem(12) 0;
+
+				a {
+					text-decoration: underline;
+				}
 			}
 
 			// (Content) Title + subtitle + Excerpt.
