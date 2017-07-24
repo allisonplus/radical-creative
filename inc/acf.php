@@ -6,6 +6,25 @@
  */
 
 /**
+ * Loop through and output ACF flexible content blocks for the current page.
+ */
+function rcs_display_page_flexible_content_blocks() {
+
+	if ( have_rows( 'content_blocks' ) ) {
+
+		while ( have_rows( 'content_blocks' ) ) {
+
+			the_row();
+
+			// Template part name MUST match layout ID.
+			get_template_part( 'template-parts/content-blocks/block', get_row_layout() );
+		}
+
+		wp_reset_postdata();
+	}
+}
+
+/**
  * Output the mobile navigation
  */
 function rcs_get_services_repeater() {
@@ -49,3 +68,14 @@ function rcs_get_services_repeater() {
 
 <?php
 }
+
+/**
+ * Replace <p> tag around image with figure div.
+ *
+ * @param string $content <p> tag around image.
+ */
+function img_unautop( $content ) {
+	$content = preg_replace( '/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<div class="figure">$1</div>', $content );
+	return $content;
+}
+add_filter( 'acf_the_content', 'img_unautop', 30 );
