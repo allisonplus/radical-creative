@@ -1,0 +1,152 @@
+//--------------------------------------------------------------
+// Fifty/Fifty Content Blocks
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Fifty-fifty global block styles
+//-----------------------------------------
+.fifty-text-media,
+.fifty-media-text,
+.fifty-text-only {
+	@include padding(0);
+
+	overflow: hidden; // accounts for video.
+
+	@include media($tablet-landscape) {
+		@include padding(0);
+	}
+
+	.fifty-wrap {
+		@include outer-container;
+
+		// align-items: center;
+		clear: both;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: rem(30);
+		padding-top: rem(30);
+		position: relative;
+		z-index: 10;
+
+		@include media($tablet-landscape) {
+			flex-direction: row;
+			padding: rem(16) 0;
+		}
+	} // .fifty-wrap
+
+	// Containers.
+	.fifty-text-wrap,
+	.fifty-media-wrap,
+	.fifty-text-left,
+	.fifty-text-right {
+		width: 100%;
+
+		@include media($tablet-landscape) {
+			width: 50%;
+		}
+
+		// Links only.
+		a {
+			border-bottom: rem(2) solid;
+		} // a
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	} // .fifty-text-wrap, .fifty-media-wrap, .fifty-text-left, .fifty-text-right
+
+	// Image/video container.
+	.fifty-media-wrap {
+		text-align: center;
+	} // .fifty-media-wrap
+} // .fifty-text-media, .fifty-media-text,.fifty-text-only
+
+
+//-----------------------------------------
+// Text left / Image right
+//-----------------------------------------
+.fifty-text-media {
+
+	// Text container.
+	.fifty-text-wrap {
+		padding: 0 0 rem(30);
+
+		@include media($tablet-landscape) {
+			padding: rem(30) rem(75) rem(30) 0;
+		}
+	} // .fifty-text-wrap
+} // .fifty-text-media
+
+
+//-----------------------------------------
+// Image left / Text right
+//-----------------------------------------
+.fifty-media-text {
+
+	// Text container.
+	.fifty-text-wrap {
+		padding: rem(30) 0;
+
+		@include media($tablet-landscape) {
+			padding: rem(30) 0 rem(30) rem(75);
+		}
+	} // .fifty-text-wrap
+} // .fifty-media-text
+
+
+//-----------------------------------------
+// Text left / Text right
+//-----------------------------------------
+.fifty-text-only {
+
+	@include media($tablet-landscape) {
+		align-items: flex-start;
+	}
+
+	// First text container.
+	.fifty-text-left {
+		padding: rem(30) 0;
+
+		@include media($tablet-landscape) {
+			padding: rem(20) rem(37.5) rem(20) 0;
+		}
+	} // .fifty-text-left
+
+	// Second text container.
+	.fifty-text-right {
+		padding: rem(30) 0;
+
+		@include media($tablet-landscape) {
+			padding: rem(20) 0 rem(20) rem(37.5);
+		}
+	} // .fifty-text-right
+} // .fifty-text-only
+
+
+//-----------------------------------------
+// Video media
+//-----------------------------------------
+.fifty-media-video {
+	max-width: 100%;
+} // .fifty-media-video
+
+
+//-----------------------------------------
+// IE specific fixes.
+//-----------------------------------------
+.ie {
+
+	.fifty-text-media,
+	.fifty-media-text {
+
+		.fifty-media-wrap {
+
+			// This wrap doesn't neatly wrap the image and leaves a lot of space below it.
+			// Setting height to 100% fixes this, somehow.
+			@include media( max-width $tablet-landscape) {
+				height: 100%;
+			}
+		} // .fifty-media-wrap
+	} // .fifty-text-media, .fifty-media-text
+} // .ie
