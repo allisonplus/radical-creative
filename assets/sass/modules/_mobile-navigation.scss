@@ -74,6 +74,7 @@
 
 // Make sure the first four items are equal widths
 .mobile-nav-menu {
+	background-color: $color-white;
 
 	// Only target the parent menu
 	.mobile-nav {
@@ -88,7 +89,7 @@
 
 		// Only target top-level items
 		> li:nth-child(-n+5) {
-			@include transition(opacity 0.5s ease);
+			// @include transition(opacity 0.5s ease);
 
 			background-color: $color-white;
 			border-top: 1px solid rgba($color-black, .1);

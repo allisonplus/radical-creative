@@ -3,8 +3,37 @@
 //--------------------------------------------------------------
 .home {
 
+	// Content
+	article {
+		@include fill-parent;
+
+		@include media($tablet-landscape) {
+			float: left;
+			width: calc(100% / 1.5);
+		}
+
+		@include media($tablet-landscape) {
+			margin-right: $gutter * 3;
+		}
+
+		@include media($desktop) {
+			margin-right: $gutter * 4.5;
+		}
+	} // article
+
+	// Sidebar with CTA.
+	.front-sidebar {
+		@include fill-parent;
+
+		@include media($tablet-landscape) {
+			float: left;
+			width: calc(100% / 3.5);
+		}
+	}
+
 	// Featured Work list.
 	.featured-work {
+		clear: both;
 		display: flex;
 		flex-wrap: wrap;
 		list-style-type: none;

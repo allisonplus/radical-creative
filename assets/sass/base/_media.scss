@@ -14,6 +14,15 @@
 }
 
 // Images
+.figure {
+	margin: 0 0 rem(12);
+	overflow: hidden;
+
+	@include media($phone-landscape) {
+		margin-bottom: 0;
+		overflow: initial;
+	}
+}
 
 img {
 	height: auto;
