@@ -16,14 +16,12 @@
 	<footer class="site-footer">
 		<div class="wrap">
 			<aside class="widget-area footer" role="complementary">
-				 <?php dynamic_sidebar( 'sidebar-3' ); ?>
+				<?php dynamic_sidebar( 'sidebar-3' ); ?>
 			</aside>
 
-			<div class="site-info">
-				<?php rcs_do_copyright_text(); ?>
-			</div>
+			<?php rcs_do_copyright_text(); ?>
 
-			<?php echo rcs_get_footer_social_links(); ?>
+			<?php echo rcs_get_footer_social_links(); // WPCS: XSS OK. ?>
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->

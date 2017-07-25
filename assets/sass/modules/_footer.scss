@@ -38,5 +38,10 @@
 
 	.site-info,
 	.social-networks {
+		text-align: center;
 	} // 	.site-info, .social-networks
+
+	.social-networks {
+		margin: rem(12) 0;
+	}
 } // .site-footer
