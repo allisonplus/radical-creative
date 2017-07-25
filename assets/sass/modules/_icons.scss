@@ -49,6 +49,7 @@
 		a {
 			display: block;
 			fill: $color-link;
+			transition: fill 0.15s ease-in-out;
 
 			&:hover,
 			&:active {

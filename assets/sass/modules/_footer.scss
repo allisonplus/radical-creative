@@ -35,6 +35,11 @@
 // Copyright + Social Networks
 //--------------------------------------------------------------
 .site-footer {
+	padding-bottom: rem(70);
+
+	@include media($tablet-landscape) {
+		padding-bottom: 0;
+	}
 
 	.site-info,
 	.social-networks {
