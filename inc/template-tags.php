@@ -495,7 +495,7 @@ function rcs_get_writing_meta_data() {
 
 
 /**
- * Create markup for MadMini newsletter.
+ * Create markup for MadMimi newsletter.
  */
 function rcs_newsletter() {
 
@@ -525,7 +525,7 @@ function rcs_newsletter() {
 }
 
 /**
- * Create shortcode for MadMini newsletter.
+ * Create shortcode for MadMimi newsletter.
  *
  * @param string $passed_values --The title you'd like for the newsletter.
  */
