@@ -15,11 +15,9 @@ get_header(); ?>
 				<?php
 				while ( have_posts() ) : the_post();
 
-					echo rcs_display_page_flexible_content_blocks(); // WPCS: XSS OK.
-
 					get_template_part( 'template-parts/content', 'page' );
 
-					echo rcs_get_services_repeater(); // WPCS: XSS OK.
+					echo rcs_display_page_flexible_content_blocks(); // WPCS: XSS OK.
 
 				endwhile; // End of the loop.
 				?>

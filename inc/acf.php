@@ -27,7 +27,7 @@ function rcs_display_page_flexible_content_blocks() {
 /**
  * Output the mobile navigation
  */
-function rcs_get_services_repeater() {
+function rcs_get_featured_items() {
 
 	if ( have_rows( 'featured_work' ) ) : ?>
 
@@ -68,14 +68,3 @@ function rcs_get_services_repeater() {
 
 <?php
 }
-
-/**
- * Replace <p> tag around image with figure div.
- *
- * @param string $content <p> tag around image.
- */
-function img_unautop( $content ) {
-	$content = preg_replace( '/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<div class="figure">$1</div>', $content );
-	return $content;
-}
-add_filter( 'acf_the_content', 'img_unautop', 30 );

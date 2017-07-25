@@ -42,3 +42,7 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<aside class="widget-area front-sidebar" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside>
