@@ -43,3 +43,14 @@ function rcs_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'rcs_body_classes' );
+
+/**
+ * Replace <p> tag around image with figure div.
+ *
+ * @param string $content <p> tag around image.
+ */
+function rcs_img_unautop( $content ) {
+	$content = preg_replace( '/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<div class="figure">$1</div>', $content );
+	return $content;
+}
+add_filter( 'the_content', 'rcs_img_unautop', 30 );
