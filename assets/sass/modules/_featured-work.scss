@@ -1,0 +1,79 @@
+//--------------------------------------------------------------
+// Featured Work module
+//--------------------------------------------------------------
+// Featured Work list.
+.featured-work {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	@include media($phone-landscape) {
+		justify-content: space-between;
+	}
+
+	// Single Work module.
+	.featured-work-single {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin: $gutter * 2 0;
+		width: 100%;
+
+		@include media($tablet-landscape) {
+			align-items: flex-start;
+			flex-direction: row;
+			width: 100%;
+		}
+
+		// <img>
+		.featured-work-img-wrapper {
+
+			// <img> link.
+			a {
+				display: inline-block;
+				font-size: 0;
+			} // a
+		} // featured-work-img-wrapper
+
+		// Title + subtitle.
+		.work-title,
+		.work-subtitle {
+			text-align: center;
+
+			@include media($tablet-landscape) {
+				text-align: left;
+			}
+		}
+
+		// Title.
+		.work-title {
+			line-height: 1;
+			margin: 0;
+		} // .work-title
+
+		// Subtitle.
+		.work-subtitle {
+			margin: rem(12) 0;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+		// (Content) Title + subtitle + Excerpt.
+		.featured-work-content {
+			flex: 1;
+
+			@include media($tablet-landscape) {
+				margin-left: rem(26);
+			}
+
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	} // .featured-work-single
+} // featured-work
