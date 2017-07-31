@@ -74,6 +74,6 @@ $color-background-screen-reader: $color-whitesmoke;
 $color-text-screen-reader: $color-blue;
 
 // Links
-$color-link: $color-mineshaft;
-$color-link-visited: darken($color-mineshaft, 5%);
-$color-link-hover: $color-aqua;
+$color-link: $color-aqua;
+$color-link-visited: darken($color-aqua, 35%);
+$color-link-hover: darken($color-aqua, 15%);

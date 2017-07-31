@@ -19,9 +19,9 @@
 				<?php dynamic_sidebar( 'sidebar-3' ); ?>
 			</aside>
 
-			<?php rcs_do_copyright_text(); ?>
-
 			<?php echo rcs_get_footer_social_links(); // WPCS: XSS OK. ?>
+
+			<?php rcs_do_copyright_text(); ?>
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
