@@ -42,9 +42,3 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
-<?php if ( ( is_front_page() ) ) : ?>
-	<aside class="widget-area front-sidebar" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</aside>
-<?php endif; ?>
