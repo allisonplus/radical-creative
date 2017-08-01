@@ -35,7 +35,7 @@ if ( ! $media_data ) {
 					echo '<video id="mp4-video" class="fifty-media-video" autoplay muted loop preload="none"><source src="' . esc_url( $media_data['url'] ) . '" type="video/mp4"></video>';
 					break;
 				case 'image':
-					echo '<img class="fifty-media-image" src="' . esc_url( $media_data['sizes']['fifty-fifty-media'] ) . '" alt="' . esc_html( $media_data['alt'] ) . '">';
+					echo '<img class="fifty-media-image" src="' . esc_url( $media_data['sizes']['medium_large'] ) . '" alt="' . esc_html( $media_data['alt'] ) . '">';
 					break;
 				case 'embed':
 					echo '<div class="fluid-embed">' . wp_oembed_get( esc_url( $media_data['url'] ), array( 'width' => 640 ) ) . '</div>'; // WPCS: XSS OK.
