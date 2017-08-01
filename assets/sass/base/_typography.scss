@@ -88,6 +88,26 @@ q {
 	}
 }
 
+blockquote {
+	font-size: rem(22);
+	line-height: 1.35;
+	margin-left: rem(75);
+	max-width: 80%;
+	padding-left: rem(42);
+	position: relative;
+
+	// Decorate quote mark.
+	&:before {
+		@include position(absolute, rem(-62) null null rem(-30));
+
+		color: $color-aqua;
+		content: "\201C" ;
+		font-family: serif;
+		font-size: rem(150);
+		opacity: 0.3;
+	} // &:before
+}
+
 address {
 	margin: 0 0 rem(24) 0;
 }
