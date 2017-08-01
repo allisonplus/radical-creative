@@ -152,6 +152,7 @@ a {
 	clear: both;
 	display: none;
 	float: left;
+	z-index: 99;
 
 	@include media($tablet-landscape) {
 		@include outer-container;
@@ -161,11 +162,15 @@ a {
 		margin: 0 auto;
 	}
 
-	.blog & {
-		float: none;
-		margin: 0 auto;
-		max-width: rem(900);
-	} // .blog &
+	// Class added when you scroll.
+	&.main-nav-scrolled {
+
+		@include media($tablet-landscape) {
+			@include position(fixed, 0 null null null);
+
+			width: 100%;
+		}
+	} // .main-nav-scrolled
 
 	// Menu area
 	ul {
