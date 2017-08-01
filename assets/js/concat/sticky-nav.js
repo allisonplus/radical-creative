@@ -36,7 +36,7 @@ window.RCS_Sticky_Nav = {};
 	// Toggle the form open and close.
 	app.stickyNav = function(e) {
 
-		var navHeight = $( '.main-navigation' ).height();
+		var navHeight = $( '.site-branding' ).height();
 
 		// Add class once below nav, otherwise, remove it.
 		$( window ).scroll( function() {
