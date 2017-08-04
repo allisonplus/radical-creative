@@ -20,6 +20,32 @@ a {
 	}
 }
 
+.button {
+	background-color: $color-link;
+	border: rem(2) solid $color-link;
+	border-radius: rem(4);
+	color: $color-white;
+	display: inline-block;
+	font-family: $font-sans;
+	font-weight: 300;
+	letter-spacing: rem(2);
+	margin: rem(10) 0;
+	padding: rem(10) rem(16);
+	text-align: center;
+	transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken($color-link, 11%);
+		border: rem(2) solid darken($color-link, 11%);
+	} // &:hover, &:active, &:focus
+
+	&:visited {
+		color: $color-white;
+	} // &:visited
+} // .button
+
 // Read more link.
 .more-link {
 	border: rem(2) solid $color-link;

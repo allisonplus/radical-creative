@@ -1,0 +1,22 @@
+//--------------------------------------------------------------
+// Single (Page + Gift)
+//--------------------------------------------------------------
+
+// Module containing download link.
+.single-gift {
+
+	@include media($phone-landscape) {
+		display: inline-block;
+		float: left;
+		margin: 0 rem(20) 0 0;
+	}
+}
+
+// Download link.
+.gift-download {
+	margin-top: 0;
+
+	@include media($phone-landscape) {
+		margin-top: rem(10);
+	}
+}

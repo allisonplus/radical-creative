@@ -68,3 +68,20 @@ function rcs_get_featured_items() {
 
 <?php
 }
+
+/**
+ * Output the mobile navigation
+ */
+function rcs_get_gift_upload() {
+
+	$gift = get_field( 'gift_upload' );
+
+	if ( ! empty( $gift ) ) : ?>
+
+		<div class="single-gift">
+			<a class="button gift-download" href="<?php echo esc_url( $gift ); ?>"><?php esc_html_e( 'Download Your Gift Here', 'rcs' ); ?></a>
+		</div>
+	<?php endif; ?>
+
+<?php
+}

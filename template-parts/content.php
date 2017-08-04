@@ -12,17 +12,23 @@
 <article <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
+
+		if ( is_single() ) {
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		} else {
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		}
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php rcs_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
+		endif;
+
+		// Gift upload link.
+		if ( 'gifts' === get_post_type() ) :
+			echo rcs_get_gift_upload(); // WPCS: XSS.
 		endif; ?>
 	</header><!-- .entry-header -->
 
