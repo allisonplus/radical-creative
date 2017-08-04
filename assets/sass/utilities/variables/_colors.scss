@@ -19,6 +19,8 @@ $color-light-yellow: #fff9c0;
 $color-black: #000;
 $color-white: #fff;
 $color-aqua: #0adcd5;
+$color-pink: #DB0A5B;
+$color-teal: #008080;
 
 // Grayscale
 $color-gray: #808080;
@@ -74,6 +76,6 @@ $color-background-screen-reader: $color-whitesmoke;
 $color-text-screen-reader: $color-blue;
 
 // Links
-$color-link: $color-aqua;
-$color-link-visited: darken($color-aqua, 35%);
-$color-link-hover: darken($color-aqua, 15%);
+$color-link: $color-teal;
+$color-link-visited: darken($color-teal, 35%);
+$color-link-hover: darken($color-teal, 15%);
