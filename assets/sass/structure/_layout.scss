@@ -3,6 +3,9 @@
 //--------------------------------------------------------------
 
 // Structure
+body {
+	margin-top: rem(38);
+}
 
 .wrap {
 	@include outer-container;

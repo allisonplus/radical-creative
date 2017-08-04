@@ -155,11 +155,21 @@ a {
 	z-index: 99;
 
 	@include media($tablet-landscape) {
-		@include outer-container;
+		@include position(fixed, 0 0 null 0);
 
 		background-color: $color-white;
 		display: block;
 		width: 100%;
+	}
+
+	// When logged in.
+	.admin-bar & {
+		top: 32px;
+	}
+
+	// Contain nav items.
+	.menu-primary-menu-container {
+		@include outer-container;
 	}
 
 	// Menu area
@@ -180,13 +190,7 @@ a {
 .main-nav-scrolled {
 	@include position(fixed, 0 null null null);
 
-	animation: slide-down 0.5s;
-	transition: margin 0.2s ease-in-out;
 	width: 100%;
-
-	.admin-bar & {
-		margin-top: 32px;
-	}
 } // .main-nav-scrolled
 
 // Small menu
