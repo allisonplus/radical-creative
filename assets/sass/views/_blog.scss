@@ -8,14 +8,16 @@
 		position: relative;
 	} // .site-main
 
-	// Overwrites default for primary section on other pagse.
+	// Overwrites default for primary section on other pages.
 	.primary {
 		float: none;
 		height: 100%;
 		margin: 0 auto;
-		max-width: rem(900);
-		transition: all 0.25s linear;
 		width: 100%;
+
+		@include media($tablet-landscape) {
+			padding-top: rem(40);
+		}
 
 		&:last-child {
 			margin-right: auto;
@@ -32,11 +34,6 @@
 		margin: 0;
 	} // .entry-title
 
-	// Content of entry to match image.
-	.entry-content {
-		max-width: rem(830);
-	} // .entry-content
-
 	// Category links
 	.cat-links {
 		margin-right: rem(4);
@@ -45,38 +42,128 @@
 
 
 //--------------------------------------------------------------
-// Sliding effect of blog sidebar
+// Blog Nav
+//--------------------------------------------------------------
+.blog {
+	.blog-menu {
+
+		li:last-of-type {
+			margin-right: 0;
+		}
+	} // .blog-menu
+} // .blog
+
+
+//--------------------------------------------------------------
+// Nav Icon Animation
 //--------------------------------------------------------------
 .blog {
 
 	// Trigger for sidebar sliding out.
 	.sliding-panel-button {
-		@include position(absolute, rem(-10) 0 null null);
+		@include position(absolute, 0 0 null null);
+		@include size( rem(32) rem(18));
 
-		font-size: rem(25);
-	} // .sliding-panel-button
+		cursor: pointer;
+		transform: rotate(0deg);
+		transition: 0.5s ease-in-out;
+
+		span {
+			@include position(absolute, null null null 0);
+			@include size(100% rem(4));
+
+			background: $color-teal;
+			border-radius: rem(9);
+			display: block;
+			opacity: 1;
+			transform: rotate(0deg);
+			transition: 0.25s ease-in-out;
+
+			&:nth-child(1) {
+				top: 0;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				top: rem(9);
+			}
+
+			&:nth-child(4) {
+				top: rem(18);
+			}
+		} // span
+
+		// Animation when sidebar open/closes.
+		&.open {
+
+			span {
+
+				&:nth-child(1),
+				&:nth-child(4) {
+					@include position(absolute, rem(18) null null 50%);
+
+					width: 0%;
+				}
+
+				&:nth-child(2) {
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg);
+				}
+			} // span
+		} // .open
+	} // .nav-icon
+} // .blog
+
+
+//--------------------------------------------------------------
+// Blog sidebar content
+//--------------------------------------------------------------
+.blog {
+
+	.sidebar-wrapper {
+		background-color: $color-gallery;
+		padding: $gutter*2;
+
+		aside {
+			max-width: rem(375);
+
+			@include media($desktop) {
+				margin: 0 auto;
+				max-width: 90%;
+			}
+		}
+	}
+}
+
+
+//--------------------------------------------------------------
+// Sliding effect of blog sidebar
+//--------------------------------------------------------------
+.blog {
 
 	// Wrapper around sidebar as a whole.
 	.sidebar-wrapper {
-		padding: rem(80) 0;
 		position: relative;
 
 		// Close button once it slides out.
 		.sliding-panel-close {
-			@include position(absolute, 0 0 null null);
+			@include position(absolute, rem(30) 10% null null);
 		}
 
 		// Content of wrapper.
 		&.sliding-panel-content {
-			@include position(fixed, 0 0 0 auto);
-			@include size(85% 100%);
+			@include position(fixed, rem(46) 0 0 auto);
+			@include size(75% 100%);
 
 			-webkit-overflow-scrolling: touch;
+			-webkit-transform: translateX(100%); // fixes on Safari 8
 			overflow-y: auto;
 			transform: translateX(100%);
-			-webkit-transform: translateX(100%); // fixes on Safari 8
 			transition: all 0.25s linear;
-			z-index: 999999;
+			z-index: 9999;
 
 			// Change that width as screens get bigger.
 			@include media($tablet-portrait) {
@@ -84,23 +171,40 @@
 			}
 
 			@include media($tablet-landscape) {
-				@include size(30% 100%);
+				@include position(fixed, rem(80) 0 0 auto);
+				@include size(35% 100%);
+			}
+
+			@include media($large-desktop) {
+				@include size(25% 100%);
 			}
 
 			// Make it appear!
 			&.is-visible {
-				transform: translateX(0);
 				-webkit-transform: translateX(0); // fixes on Safari 8
+				transform: translateX(0);
 			} // &.is-visible
 		} // .sliding-panel-content
 	} // .sidebar-wrapper
 
 	// Move primary content over as well when sidebar slides out.
-	.primary {
+	.primary,
+	.menu-primary-menu-container,
+	.footer {
+		transition: all 0.25s linear;
 
 		&.is-visible {
-			-webkit-transform: translate3d(-30%,0,0);
-			transform: translate3d(-30%,0,0);
+			transform: translate3d(-85%, 0, 0);
+
+			@include media($tablet-portrait) {
+				-webkit-transform: translate3d(-55%, 0, 0);
+				transform: translate3d(-55%, 0, 0);
+			}
+
+			@include media($tablet-landscape) {
+				-webkit-transform: translate3d(-40%, 0, 0);
+				transform: translate3d(-40%, 0, 0);
+			}
 		} // &.is-visible
-	} // .primary
+	} // .primary, .menu-primary-menu-container, .site-footer
 } // .blog

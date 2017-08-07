@@ -23,6 +23,7 @@ window.RCS_Sidebar_Slide = {};
 			button: $( '.sliding-panel-button' ),
 			primaryContent: $( '.blog .primary' ),
 			blogNav: $( '.blog .menu-primary-menu-container' ),
+			footer: $( '.footer' ),
 			closePanel: $( '.sliding-panel-close' ),
 			panelContent: $( '.sliding-panel-content' ),
 		};
@@ -43,15 +44,18 @@ window.RCS_Sidebar_Slide = {};
 	app.toggleNav = function(e) {
 
 		if ( $( '.sliding-panel-content' ).hasClass( 'is-visible' ) ) {
+			app.$c.button.removeClass( 'open' );
 			app.$c.panelContent.removeClass( 'is-visible' );
 			app.$c.primaryContent.removeClass( 'is-visible' );
 			app.$c.blogNav.removeClass( 'is-visible' );
-
+			app.$c.footer.removeClass( 'is-visible' );
 
 		} else {
+			app.$c.button.addClass( 'open' );
 			app.$c.panelContent.addClass( 'is-visible' );
 			app.$c.primaryContent.addClass( 'is-visible' );
 			app.$c.blogNav.addClass( 'is-visible' );
+			app.$c.footer.addClass( 'is-visible' );
 		}
 
 		e.preventDefault();
