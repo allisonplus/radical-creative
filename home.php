@@ -14,7 +14,7 @@ get_header(); ?>
 		<div class="primary content-area">
 			<main id="main" class="site-main" role="main">
 
-			<a class="js-menu-trigger sliding-panel-button" href="javascript.void();">&#9776;</a>
+			<a class="js-menu-trigger sliding-panel-button" href="javascript.void();"><?php esc_html_e( '&#9776;', 'rcs' ); ?></a>
 
 				<?php
 				while ( have_posts() ) : the_post();
@@ -28,7 +28,7 @@ get_header(); ?>
 		</div><!-- .primary -->
 
 		<div class="sidebar-wrapper sliding-panel-content">
-			<a class=" sliding-panel-close" href="javascript.void();">&#10005;</a>
+			<a class=" sliding-panel-close" href="javascript.void();"><?php esc_html_e( '&#10005;', 'rcs' ); ?></a>
 
 			<?php dynamic_sidebar( 'sidebar-2' ); ?>
 

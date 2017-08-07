@@ -414,6 +414,29 @@ function rcs_do_mobile_navigation_menu() {
 }
 
 /**
+ * Output the mobile navigation
+ */
+function rcs_do_blog_mobile_nav_menu() {
+
+	$mobile_menu = has_nav_menu( 'blog' ) ? 'blog' : 'primary';
+?>
+	<nav id="mobile-menu" class="mobile-nav-menu">
+		<button class="close-mobile-menu"><span class="screen-reader-text"><?php esc_html_e( 'Close menu', 'rcs' ); ?></span><?php rcs_do_svg( array( 'icon' => 'close' ) ); ?></button>
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => $mobile_menu,
+				'menu_id'        => 'primary-menu',
+				'menu_class'     => 'menu dropdown mobile-nav',
+				'link_before'    => '<span>',
+				'link_after'     => '</span>',
+				'menu_id'         => 'blog-menu primary-menu',
+			) );
+		?>
+	</nav>
+<?php
+}
+
+/**
  * Social links for the footer.
  */
 function rcs_get_footer_social_links() {

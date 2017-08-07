@@ -31,6 +31,22 @@
 	<header class="site-header">
 		<div class="wrap">
 
+		<?php // If it's the blog/writing page, use different menu + header. ?>
+		<?php if ( is_home() ) : ?>
+
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+					wp_nav_menu( array(
+						'theme_location'  => 'blog',
+						'menu_id'         => 'blog-menu',
+						'menu_class'      => 'menu dropdown blog-menu',
+						'container_class' => 'menu-primary-menu-container',
+					) );
+				?>
+			</nav><!-- #site-navigation -->
+
+		<?php else : ?>
+
 			<nav id="site-navigation" class="main-navigation">
 				<?php
 					wp_nav_menu( array(
@@ -43,13 +59,20 @@
 
 			<div class="site-branding">
 
-				<?php // Banner Image. ?>
+				<?php // BANNER IMAGE PLACED HERE ACROSS ALL PAGES. ?>
 				<?php if ( get_header_image() ) : ?>
-				<a class="banner-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="Radical Creative Sanctuary">
 				</a>
+				<?php endif; // End header image check. ?>
+
+				<?php if ( is_front_page() && is_home() ) : ?>
+					<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
+				<?php else : ?>
+					<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
 				<?php endif; ?>
 			</div><!-- .site-branding -->
+		<?php endif; ?>
 
 		</div><!-- .wrap -->
 	</header><!-- #masthead -->

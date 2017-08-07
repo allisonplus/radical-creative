@@ -11,9 +11,7 @@
 
 <article <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'blog' );
-		} ?>
+		<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'blog' ); } ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php rcs_get_writing_meta_data(); ?>
 	</header><!-- .entry-header -->
@@ -22,12 +20,10 @@
 
 		<?php
 			echo rcs_get_the_excerpt( $args = array(
-				// 'length' => 10,
+				'length' => 55,
 				// 'more'   => wds_rcs_excerpt_more()
 				) );
 			// echo wds_rcs_excerpt_more($more);
-			//
-			// var_dump($more);
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rcs' ),
