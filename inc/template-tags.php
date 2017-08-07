@@ -212,7 +212,7 @@ function rcs_get_the_title( $args = array() ) {
  */
 function rcs_get_the_excerpt( $args = array() ) {
 
-	$button = ' <a class="more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'rcs' ) . '</a>';
+	$button = ' <a class="button more-link" href="' . get_permalink() . '">' . esc_html__( 'Read More', 'rcs' ) . '</a>';
 
 	// Set defaults.
 	$defaults = array(

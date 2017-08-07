@@ -12,18 +12,14 @@
 <article <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'blog' ); } ?>
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php rcs_get_writing_meta_data(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 
 		<?php
-			echo rcs_get_the_excerpt( $args = array(
-				'length' => 55,
-				// 'more'   => wds_rcs_excerpt_more()
-				) );
-			// echo wds_rcs_excerpt_more($more);
+			echo rcs_get_the_excerpt( $args = array( 'length' => 55 ) ); // WPCS: XSS OK.
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rcs' ),
