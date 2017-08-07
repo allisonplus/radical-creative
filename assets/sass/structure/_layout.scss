@@ -4,7 +4,10 @@
 
 // Structure
 body {
-	margin-top: rem(38);
+
+	@include media($tablet-landscape) {
+		margin-top: rem(38);
+	}
 }
 
 .wrap {
@@ -16,14 +19,6 @@ body {
 		padding: 0;
 	}
 } // .wrap
-
-.site-header,
-.site-footer {
-
-	@include media($tablet-landscape) {
-		padding: 0 2 * $gutter;
-	}
-} // .site-header, .site-footer
 
 .site-content {
 	margin: rem(20) auto;

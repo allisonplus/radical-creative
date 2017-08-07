@@ -2,16 +2,17 @@
 // Footer
 //--------------------------------------------------------------
 .footer {
-
 	// Widget area in footer.
 	&.widget-area {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		text-align: center;
 
-		@include media($tablet-landscape) {
+		@include media($tablet-portrait) {
 			align-items: center;
 			flex-direction: row;
+			text-align: left;
 		}
 
 		// Any components within footer (into thirds).
@@ -20,9 +21,9 @@
 			width: 100%;
 
 			@include media($tablet-landscape) {
-				width: calc((100% / 3 - (2*15px));
+				width: calc( (100% / 3 - (2*15px) ));
 			}
-		} // > div, > aside
+		} // div, aside
 
 		// Titles of footer widgets.
 		.widget-title {

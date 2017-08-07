@@ -185,7 +185,12 @@ a {
 
 		background-color: $color-white;
 		display: block;
+		padding: 0 $gutter;
 		width: 100%;
+	}
+
+	.blog & {
+		padding: 0 $gutter*2;
 	}
 
 	// When logged in.

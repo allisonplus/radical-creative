@@ -6,10 +6,11 @@
 }
 
 .site-branding {
+	display: block;
+	font-size: 0;
 
 	.banner-image {
 		display: inline-block;
-		font-size: 0;
 	}
 } // .site-branding
 

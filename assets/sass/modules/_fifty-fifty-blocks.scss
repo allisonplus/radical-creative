@@ -26,7 +26,6 @@
 		padding-bottom: rem(30);
 		padding-top: rem(30);
 		position: relative;
-		z-index: 10;
 
 		@include media($tablet-landscape) {
 			flex-direction: row;
