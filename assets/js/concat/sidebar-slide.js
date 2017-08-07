@@ -44,13 +44,16 @@ window.RCS_Sidebar_Slide = {};
 	app.toggleNav = function(e) {
 
 		if ( $( '.sliding-panel-content' ).hasClass( 'is-visible' ) ) {
+			app.$c.body.removeClass( 'sidebar-is-open' );
 			app.$c.button.removeClass( 'open' );
 			app.$c.panelContent.removeClass( 'is-visible' );
 			app.$c.primaryContent.removeClass( 'is-visible' );
 			app.$c.blogNav.removeClass( 'is-visible' );
 			app.$c.footer.removeClass( 'is-visible' );
 
+
 		} else {
+			app.$c.body.addClass( 'sidebar-is-open' );
 			app.$c.button.addClass( 'open' );
 			app.$c.panelContent.addClass( 'is-visible' );
 			app.$c.primaryContent.addClass( 'is-visible' );

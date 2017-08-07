@@ -8,6 +8,10 @@ body {
 	@include media($tablet-landscape) {
 		margin-top: rem(38);
 	}
+
+	&.sidebar-is-open {
+		overflow: hidden;
+	} // .sidebar-is-open
 }
 
 .wrap {
