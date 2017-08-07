@@ -22,7 +22,7 @@ window.RCS_Sidebar_Slide = {};
 			body: $( 'body' ),
 			button: $( '.sliding-panel-button' ),
 			primaryContent: $( '.blog .primary' ),
-			// fadeScreen: $( '.sliding-panel-fade-screen' ),
+			blogNav: $( '.blog .menu-primary-menu-container' ),
 			closePanel: $( '.sliding-panel-close' ),
 			panelContent: $( '.sliding-panel-content' ),
 		};
@@ -31,8 +31,6 @@ window.RCS_Sidebar_Slide = {};
 	// Combine all events.
 	app.bindEvents = function() {
 		app.$c.button.on( 'click touchstart', app.toggleNav );
-
-		// app.$c.fadeScreen.on( 'click touchstart', app.toggleNav );
 		app.$c.closePanel.on( 'click touchstart', app.toggleNav );
 	};
 
@@ -47,10 +45,13 @@ window.RCS_Sidebar_Slide = {};
 		if ( $( '.sliding-panel-content' ).hasClass( 'is-visible' ) ) {
 			app.$c.panelContent.removeClass( 'is-visible' );
 			app.$c.primaryContent.removeClass( 'is-visible' );
+			app.$c.blogNav.removeClass( 'is-visible' );
+
 
 		} else {
 			app.$c.panelContent.addClass( 'is-visible' );
 			app.$c.primaryContent.addClass( 'is-visible' );
+			app.$c.blogNav.addClass( 'is-visible' );
 		}
 
 		e.preventDefault();
