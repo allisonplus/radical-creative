@@ -31,8 +31,8 @@
 	<header class="site-header">
 		<div class="wrap">
 
-		<?php // If it's the blog/writing page, use different menu + header. ?>
-		<?php if ( is_home() ) : ?>
+		<?php // If it's a blog/writing page, use different menu + header. ?>
+		<?php if ( rcs_is_blog() ) : ?>
 
 			<nav id="site-navigation" class="main-navigation">
 				<?php
@@ -65,12 +65,6 @@
 					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="Radical Creative Sanctuary">
 				</a>
 				<?php endif; // End header image check. ?>
-
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
-				<?php else : ?>
-					<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
-				<?php endif; ?>
 			</div><!-- .site-branding -->
 		<?php endif; ?>
 

@@ -561,3 +561,12 @@ function rcs_newsletter_shortcode( $passed_values ) {
 	return "<div class='rcs-newsletter'><h3>" . $attributes['title'] . '</h3>' . rcs_newsletter() . '</div>';
 }
 add_shortcode( 'rcs_newsletter', 'rcs_newsletter_shortcode' );
+
+/**
+ * Check if it's the blog.
+ */
+function rcs_is_blog() {
+
+	return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
+
+}
