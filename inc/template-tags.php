@@ -64,16 +64,6 @@ if ( ! function_exists( 'rcs_entry_footer' ) ) :
 			comments_popup_link( esc_html__( 'Leave a comment', 'rcs' ), esc_html__( '1 Comment', 'rcs' ), esc_html__( '% Comments', 'rcs' ) );
 			echo '</span>';
 		}
-
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'rcs' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 

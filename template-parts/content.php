@@ -24,11 +24,6 @@
 			<?php rcs_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
-		endif;
-
-		// Gift upload link.
-		if ( 'gifts' === get_post_type() ) :
-			echo rcs_get_gift_upload(); // WPCS: XSS.
 		endif; ?>
 	</header><!-- .entry-header -->
 
@@ -45,6 +40,12 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<?php
+		// Gift upload link.
+		if ( 'gifts' === get_post_type() ) :
+			echo rcs_get_gift_upload(); // WPCS: XSS.
+		endif; ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
