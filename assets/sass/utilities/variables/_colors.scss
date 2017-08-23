@@ -14,12 +14,9 @@
 // COLORS
 
 // Primary palette
-$color-blue: #21759b;
-$color-light-yellow: #fff9c0;
 $color-black: #000;
 $color-white: #fff;
 $color-aqua: #0adcd5;
-$color-pink: #db0a5b;
 $color-teal: #008080;
 $color-grad-top: #80f9e2;
 $color-grad-bottom: #7d90f9;
@@ -75,9 +72,9 @@ $color-border-abbr: $color-dove-gray;
 
 // Accessibility
 $color-background-screen-reader: $color-whitesmoke;
-$color-text-screen-reader: $color-blue;
+$color-text-screen-reader: $color-teal;
 
 // Links
-$color-link: $color-teal;
-$color-link-visited: darken($color-teal, 35%);
-$color-link-hover: darken($color-teal, 15%);
+$color-link: $color-mineshaft;
+$color-link-visited: $color-mineshaft;
+$color-link-hover: darken($color-mineshaft, 15%);
