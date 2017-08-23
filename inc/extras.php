@@ -54,3 +54,49 @@ function rcs_img_unautop( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'rcs_img_unautop', 30 );
+
+add_action( 'login_enqueue_scripts', 'rcs_custom_login' );
+/**
+ * Customize the login screen styles.
+ */
+function rcs_custom_login() {
+	?>
+
+	<style type="text/css">
+		.login {
+			align-items: center;
+			background: linear-gradient(to top, #80f9e2, #7d90f9 70%);
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			justify-content: center;
+		}
+		#login {
+			padding: 0 !important;
+		}
+		#login h1 a,
+		.login h1 a {
+			background-image: url( <?php echo get_stylesheet_directory_uri() . '/assets/images/rcs-logo.png'; ?> );
+			background-size: contain;
+			height: 150px;
+			width: 150px;
+		}
+		.login #nav a,
+		#login #nav a,
+		.login #backtoblog a,
+		#login #backtoblog a {
+			color: #111;
+		}
+		.login #nav a:hover,
+		#login #nav a:hover,
+		.login #backtoblog a:hover,
+		#login #backtoblog a:hover {
+			color: #111;
+		}
+
+		.login #backtoblog, .login #nav {
+			padding: 0!important;
+		}
+	</style>
+	<?php
+}
