@@ -96,15 +96,15 @@ blockquote {
 	padding-left: rem(42);
 	position: relative;
 
-	// Decorate quote mark.
+	// Decorative circle w/ gradient.
 	&:before {
-		@include position(absolute, rem(-62) null null rem(-30));
+		@include size(rem(65));
+		@include position(absolute, rem(5) null null rem(-38));
 
-		color: $color-aqua;
-		content: "\201C" ;
-		font-family: serif;
-		font-size: rem(150);
-		opacity: 0.3;
+		background: linear-gradient(to bottom, $color-grad-top 30%, $color-grad-bottom 85%);
+		border-radius: 50%;
+		content: "";
+		opacity: 0.8;
 	} // &:before
 }
 
