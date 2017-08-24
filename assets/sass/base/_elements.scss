@@ -11,11 +11,12 @@ object {
 }
 
 hr {
-	@include size(auto 1px);
+	@include size(rem(125));
 
-	background-color: $color-background-hr;
-	border: 0;
-	margin: 0 0 rem(24) 0;
+	background-image: url("assets/images/heart-page-break.jpg");
+	background-repeat: no-repeat;
+	border: none;
+	margin: 0 auto rem(15);
 }
 
 figure {
@@ -54,7 +55,7 @@ dd {
 
 table {
 	@include size(100% auto);
-	
+
 	margin: 0 0 rem(24) 0;
 }
 
