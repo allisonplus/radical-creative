@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 
 // Links
-
 a {
 	color: $color-link;
 	text-decoration: none;
@@ -84,6 +83,7 @@ a {
 	text-align: right;
 
 	.navigation-wrapper & {
+		background-color: $color-white;
 		text-align: left;
 
 		@include media($tablet-landscape) {
@@ -109,12 +109,14 @@ a {
 
 		&:first-of-type {
 			@include media($tablet-landscape) {
+				margin-left: 0;
 				padding-left: 0;
 			}
 		}
 
 		&:last-of-type {
 			@include media($tablet-landscape) {
+				margin-right: 0;
 				padding-right: 0;
 			}
 		}
@@ -230,12 +232,10 @@ a {
 }
 
 // Main navigation (after creating a menu in the dashboard)
-.main-navigation {
+.main-nav {
 	@include size(100% auto);
 
 	clear: both;
-	display: none;
-	float: left;
 	z-index: 99;
 
 	@include media($tablet-landscape) {
@@ -260,36 +260,15 @@ a {
 	.menu-primary-menu-container {
 		@include outer-container;
 	}
-
-	// Menu area
-	ul {
-		display: none;
-
-		@include media($phone-landscape) {
-			display: block;
-		}
-	}
-
-	&.toggled ul {
-		display: block;
-	}
 }
 
 // Class added when you scroll.
 .main-nav-scrolled {
 	@include position(fixed, 0 null null null);
+	@include fill-parent;
 
 	width: 100%;
 } // .main-nav-scrolled
-
-// Small menu
-.menu-toggle {
-	display: block;
-
-	@include media($phone-landscape) {
-		display: none;
-	}
-}
 
 .comment-navigation,
 .posts-navigation,

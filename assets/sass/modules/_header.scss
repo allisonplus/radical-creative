@@ -11,6 +11,13 @@
 			padding-top: 0;
 		}
 	}
+
+	.admin-bar & {
+
+		@include media($tablet-landscape) {
+			padding-top: rem(56);
+		}
+	}
 }
 
 .site-branding {
