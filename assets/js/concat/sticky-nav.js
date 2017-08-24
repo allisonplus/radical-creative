@@ -19,7 +19,7 @@ window.RCS_Sticky_Nav = {};
 		app.$c = {
 			window: $( window ),
 			body: $( 'body' ),
-			nav: $( '.main-navigation' ),
+			nav: $( '.main-nav' ),
 		};
 	};
 
