@@ -142,11 +142,8 @@
 
 		@include media($tablet-landscape) {
 			@include position(initial, null null null null);
-			// -webkit-overflow-scrolling: touch;
 			-webkit-transform: initial; // fixes on Safari 8
-			// overflow-y: auto;
 			transform: initial;
-
 		}
 
 		// Make it appear!
