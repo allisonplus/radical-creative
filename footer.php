@@ -26,12 +26,6 @@
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
-<?php if ( is_home() ) {
-	rcs_do_blog_mobile_nav_menu();
-} else {
-	rcs_do_mobile_navigation_menu();
-} ?>
-
 <?php wp_footer(); ?>
 
 </body>
