@@ -99,8 +99,8 @@ function rcs_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'sidebar-2' => esc_html__( 'Blog Sidebar', 'rcs' ),
-		'sidebar-3' => esc_html__( 'Footer', 'rcs' ),
+		'sidebar-2' => esc_html__( 'Footer', 'rcs' ),
+		// 'sidebar-3' => esc_html__( 'Blog Sidebar', 'rcs' ),
 	);
 
 	// Loop through each sidebar and register.

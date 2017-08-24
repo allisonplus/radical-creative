@@ -19,35 +19,7 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below?', 'rcs' ); ?></p>
-
-						<?php
-
-							the_widget( 'WP_Widget_Recent_Posts' );
-
-							// Only show the widget if site has multiple categories.
-							if ( rcs_categorized_blog() ) :
-						?>
-
-						<div class="widget widget_categories">
-							<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'rcs' ); ?></h2>
-							<ul>
-							<?php
-								wp_list_categories( array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								) );
-							?>
-							</ul>
-						</div><!-- .widget -->
-
-						<?php
-							endif;
-						?>
-
+						<p><?php esc_html_e( 'I can’t find what you’re looking for. Let\'s start over on', 'rcs' ); ?><a href="<?php echo home_url(); ?>"><?php esc_html_e( ' the homepage.', 'rcs' ); ?></a></p>
 					</div><!-- .page-content -->
 				</section><!-- .error-404 -->
 
