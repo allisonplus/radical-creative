@@ -21,20 +21,18 @@ function rcs_font_url() {
 	 */
 	// $roboto = _x( 'on', 'Roboto font: on or off', 'rcs' );
 	$libre = _x( 'on', 'Libre Baskerville font: on or off', 'rcs' );
-	// $open_sans = _x( 'on', 'Open Sans font: on or off', 'rcs' );
-	$montserrat = _x( 'on', 'Montserrat font: on or off', 'rcs' );
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'rcs' );
+	// $montserrat = _x( 'on', 'Montserrat font: on or off', 'rcs' );
 
-	if ( 'off' !== $libre || 'off' !== $montserrat ) {
+	if ( 'off' !== $libre || 'off' !== $open_sans ) {
 		$font_families = array();
 
 		if ( 'off' !== $libre ) {
-			// $font_families[] = 'Roboto:400,700';
 			$font_families[] = 'Libre Baskerville:400,700';
 		}
 
-		if ( 'off' !== $montserrat ) {
-			// $font_families[] = 'Open Sans:400,300,700';
-			$font_families[] = 'Montserrat:400,300,700';
+		if ( 'off' !== $open_sans ) {
+			$font_families[] = 'Open Sans:400,300,700';
 		}
 
 		$query_args = array(

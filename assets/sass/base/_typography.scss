@@ -49,15 +49,37 @@ h4,
 	font-size: 22px;
 }
 
-h5,
-.h5 {
+.entry-content {
 
-}
+	h1,
+	h4 {
+		font-family: $font-serif;
+	}
 
-h6,
-.h6 {
+	h2,
+	h3 {
+		font-family: $font-sans;
+	}
 
-}
+	h1 {
+		font-size: 28px;
+	}
+
+	h2 {
+		text-transform: uppercase;
+	}
+
+	h3 {
+		font-weight: 300;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+
+
+} // .entry-content
 
 // Copy
 
