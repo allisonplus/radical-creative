@@ -32,11 +32,15 @@ textarea {
 h1,
 .h1 {
 	font-size: 48px;
+	font-weight: 400;
 }
 
 h2,
 .h2 {
-	font-size: 32px;
+	font-family: $font-sans;
+	font-size: 28px;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 
 h3,
@@ -51,36 +55,24 @@ h4,
 
 .entry-content {
 
-	h1,
-	h4 {
-		font-family: $font-serif;
-	}
-
-	h2,
-	h3 {
-		font-family: $font-sans;
-	}
-
-	h1 {
-		font-size: 28px;
+	p {
+		font-size: 21px;
 	}
 
 	h2 {
-		text-transform: uppercase;
-	}
-
-	h3 {
-		font-weight: 300;
+		margin-top: 0;
 	}
 
 	h4 {
-		font-size: 16px;
+		font-family: $font-serif;
+		font-size: 30px;
 	}
 } // .entry-content
 
 // Copy
 
 p {
+	font-weight: 300;
 	margin: 0 0 rem(24) 0;
 }
 

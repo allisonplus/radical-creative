@@ -13,6 +13,11 @@
 
 	<?php if ( ! ( is_front_page() ) ) : ?>
 		<header class="entry-header">
+
+			<?php if ( has_post_thumbnail() ) {
+				echo the_post_thumbnail( 'featured-size', array( 'class' => 'featured-image' ) );
+			} ?>
+
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>

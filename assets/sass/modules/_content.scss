@@ -3,9 +3,14 @@
 //--------------------------------------------------------------
 
 // Posts and pages
+.entry-header {
+	text-align: center;
+}
+
 
 .entry-title {
-	font-size: rem(36);
+	margin-bottom: rem(12);
+	margin-top: 0;
 }
 
 .sticky {

@@ -99,7 +99,7 @@ a {
 
 		@include media($tablet-landscape) {
 			font-size: rem(15);
-			letter-spacing: .5px;
+			letter-spacing: 0.5px;
 		}
 
 		@include media($desktop) {
@@ -206,7 +206,6 @@ a {
 
 	// Menu hyperlinks.
 	a {
-		border-bottom: 2px solid $color-silver;
 		color: $color-mineshaft;
 		display: block;
 		padding: rem(2) rem(3) 0;
@@ -215,7 +214,7 @@ a {
 
 		&:hover,
 		&:focus {
-			background-color: lighten($color-silver, 5%);
+			background-color: lighten($color-silver, 12%);
 		}
 	}
 
