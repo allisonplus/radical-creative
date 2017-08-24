@@ -10,6 +10,10 @@
 	padding: 0;
 	z-index: 999;
 
+	@include media($tablet-landscape) {
+		display: none;
+	}
+
 	&:active,
 	&:hover,
 	&:focus {
@@ -47,9 +51,6 @@
 		}
 	} // &.open
 
-	@include media($tablet-landscape) {
-		display: none;
-	}
 } // .sliding-panel-button
 
 // //--------------------------------------------------------------
@@ -69,8 +70,6 @@
 
 	// Container around primary nav.
 	.menu-primary-menu-container {
-		// border-bottom: rem(1) solid #CCCCCC;
-		// padding-bottom: rem(12);
 		padding-top: rem(75);
 
 		@include media($tablet-landscape) {
@@ -80,15 +79,6 @@
 
 	// Primary navigation.
 	.main-menu {
-
-		// Links.
-		a {
-			// padding: rem(12) rem(12) rem(12) rem(22);
-
-			@include media($phone-landscape) {
-				// padding: rem(12) rem(12) rem(12) rem(30);
-			}
-		} // a
 
 		li {
 			width: 100%;
@@ -123,7 +113,6 @@
 
 			a {
 				border-bottom: none;
-				// padding-left: 0;
 				padding-right: 0;
 
 				&:after {
