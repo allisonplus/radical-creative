@@ -53,8 +53,8 @@ function rcs_get_featured_items() {
 			<?php endif; ?>
 
 				<div class="featured-work-content">
-					<h3 class="work-title"><?php echo esc_html( $title ); ?></h3>
-					<h4 class="work-subtitle"><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $subtitle ); ?></a></h4>
+					<h3 class="h1 work-title"><?php echo esc_html( $title ); ?></h3>
+					<h4 class="h2 work-subtitle"><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $subtitle ); ?></a></h4>
 					<?php echo wp_kses_post( $excerpt ); ?>
 				</div><!--/.featured-work-content-->
 			</li>
