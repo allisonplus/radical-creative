@@ -46,26 +46,35 @@
 			</nav><!-- #site-navigation -->
 
 		<?php else : ?>
+			<button class="sliding-panel-button mobile-menu-toggle" type="button">
+				<span class="mobile-menu-bar line-1"></span>
+				<span class="mobile-menu-bar line-2"></span>
+				<span class="mobile-menu-bar line-3"></span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'rcs' ); ?></span>
+			</button>
 
-			<nav id="site-navigation" class="main-navigation">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu dropdown',
-					) );
-				?>
-			</nav><!-- #site-navigation -->
+			<div class="navigation-wrapper sliding-panel-content header-mobile">
 
-			<div class="site-branding">
+				<nav id="site-navigation" class="main-nav">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'menu menu-horizontal main-menu',
+						) );
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
 
-				<?php // BANNER IMAGE PLACED HERE ACROSS ALL PAGES. ?>
-				<?php if ( get_header_image() ) : ?>
-				<a class="banner-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="Radical Creative Sanctuary">
-				</a>
-				<?php endif; // End header image check. ?>
-			</div><!-- .site-branding -->
+				<div class="site-branding">
+
+					<?php // BANNER IMAGE PLACED HERE ACROSS ALL PAGES. ?>
+					<?php if ( get_header_image() ) : ?>
+					<a class="banner-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="Radical Creative Sanctuary">
+					</a>
+					<?php endif; // End header image check. ?>
+				</div><!-- .site-branding -->
 		<?php endif; ?>
 
 		</div><!-- .wrap -->

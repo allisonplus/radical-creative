@@ -6,7 +6,7 @@
 body {
 
 	@include media($tablet-landscape) {
-		margin-top: rem(54);
+		// margin-top: rem(54);
 	}
 
 	&.sidebar-is-open {

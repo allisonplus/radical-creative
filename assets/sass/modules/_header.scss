@@ -2,7 +2,15 @@
 // Header
 //--------------------------------------------------------------
 .site-header {
-	// margin-top: 14px;
+
+	.wrap {
+		padding-top: rem(48);
+		position: relative;
+
+		@include media($tablet-landscape) {
+			padding-top: 0;
+		}
+	}
 }
 
 .site-branding {
