@@ -6,16 +6,12 @@
 	.wrap {
 		padding-top: rem(48);
 		position: relative;
-
-		@include media($tablet-landscape) {
-			padding-top: 0;
-		}
 	}
 
 	.admin-bar & {
 
 		@include media($tablet-landscape) {
-			padding-top: rem(56);
+			padding-top: 0;
 		}
 	}
 }

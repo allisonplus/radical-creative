@@ -4,7 +4,7 @@
 
 // Hamburger Nav
 .sliding-panel-button {
-	@include position(absolute, 0 rem(24) null null);
+	@include position(absolute, rem(5) rem(24) null null);
 
 	background-color: transparent;
 	padding: 0;
@@ -69,10 +69,18 @@
 
 	// Container around primary nav.
 	.menu-primary-menu-container {
-		padding-top: rem(75);
+		padding-top: rem(25);
 
 		@include media($tablet-landscape) {
 			padding-top: 0;
+		}
+
+		.admin-bar & {
+			padding-top: rem(75);
+
+			@include media($tablet-landscape) {
+				padding-top: 0;
+			}
 		}
 	} // .menu-primary-menu-container
 
