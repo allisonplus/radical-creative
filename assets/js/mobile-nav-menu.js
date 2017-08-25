@@ -28,7 +28,7 @@ window.RCS_Mobile_Nav_Slide = {};
 
 	// Combine all events.
 	app.bindEvents = function() {
-		app.$c.button.on( 'click, touchstart', app.toggleNav );
+		app.$c.button.on( 'click', app.toggleNav );
 	};
 
 	// Do we meet the requirements?
@@ -38,6 +38,7 @@ window.RCS_Mobile_Nav_Slide = {};
 
 	// Toggle the form open and close.
 	app.toggleNav = function(e) {
+		// console.log("this this");
 		app.$c.body.toggleClass( 'sidebar-is-open' );
 		app.$c.button.toggleClass( 'open' );
 		app.$c.panelContent.toggleClass( 'is-visible' );
