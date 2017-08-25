@@ -19,11 +19,13 @@
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</aside>
 
-			<?php echo rcs_get_footer_social_links(); // WPCS: XSS OK. ?>
+			<div class="site-info">
+				<?php rcs_do_copyright_text(); ?>
 
-			<?php rcs_do_copyright_text(); ?>
+				<?php echo rcs_get_footer_social_links(); // WPCS: XSS OK. ?>
 
-			<!-- <?php esc_html_e( 'Made with love by Allison', 'rcs' ); ?> -->
+				<?php rcs_do_build_text(); ?>
+			</div>
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->

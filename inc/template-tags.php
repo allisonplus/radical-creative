@@ -328,7 +328,16 @@ function rcs_do_copyright_text() {
 	}
 
 	// Echo the text.
-	echo '<div class="site-info"><span class="copyright-text">	&#169;' . date( 'Y' ) . ' ' . wp_kses_post( $copyright_text ) . '</span></div>'; // WPCS: XSS OK.
+	echo '<span class="copyright-text">	&#169;' . date( 'Y' ) . ' ' . wp_kses_post( $copyright_text ) . '</span>'; // WPCS: XSS OK.
+}
+
+/**
+ * Echo build text for dev info.
+ */
+function rcs_do_build_text() {
+
+	// Echo the text.
+	echo '<div class="dev-info">' . esc_html( 'Built with ', 'rcs' ) . '<span class="heart">&#9829; </span>' . esc_html( 'by ', 'rcs' ) . '<a class="dev-link" href="' . esc_url('http://www.allisontarr.com', 'rcs') . '">Allison Tarr</a></div>'; // WPCS: XSS OK.
 }
 
 /**
