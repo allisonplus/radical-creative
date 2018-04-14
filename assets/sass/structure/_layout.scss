@@ -21,10 +21,10 @@ body {
 } // .wrap
 
 .site-content {
-	margin: rem(20) auto;
+	margin: 20px auto;
 
 	@include media($desktop) {
-		margin: rem(20) auto rem(60);
+		margin: 20px auto 60px;
 	}
 } // .site-content
 

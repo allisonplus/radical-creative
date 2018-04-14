@@ -23,13 +23,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-bottom: rem(30);
-		padding-top: rem(30);
+		padding-bottom: 30px;
+		padding-top: 30px;
 		position: relative;
 
 		@include media($tablet-landscape) {
 			flex-direction: row;
-			padding: rem(16) 0;
+			padding: 16px 0;
 		}
 	} // .fifty-wrap
 
@@ -46,7 +46,7 @@
 
 		// Links only.
 		a {
-			border-bottom: rem(2) solid;
+			border-bottom: 2px solid;
 		} // a
 
 		p:last-of-type {
@@ -68,10 +68,10 @@
 
 	// Text container.
 	.fifty-text-wrap {
-		padding: 0 0 rem(30);
+		padding: 0 0 30px;
 
 		@include media($tablet-landscape) {
-			padding: rem(30) rem(75) rem(30) 0;
+			padding: 30px 75px 30px 0;
 		}
 	} // .fifty-text-wrap
 } // .fifty-text-media
@@ -84,10 +84,10 @@
 
 	// Text container.
 	.fifty-text-wrap {
-		padding: rem(30) 0;
+		padding: 30px 0;
 
 		@include media($tablet-landscape) {
-			padding: rem(30) 0 rem(30) rem(75);
+			padding: 30px 0 30px 75px;
 		}
 	} // .fifty-text-wrap
 } // .fifty-media-text
@@ -104,19 +104,19 @@
 
 	// First text container.
 	.fifty-text-left {
-		padding: rem(30) 0;
+		padding: 30px 0;
 
 		@include media($tablet-landscape) {
-			padding: rem(20) rem(37.5) rem(20) 0;
+			padding: 20px 37.5px 20px 0;
 		}
 	} // .fifty-text-left
 
 	// Second text container.
 	.fifty-text-right {
-		padding: rem(30) 0;
+		padding: 30px 0;
 
 		@include media($tablet-landscape) {
-			padding: rem(20) 0 rem(20) rem(37.5);
+			padding: 20px 0 20px 37.5px;
 		}
 	} // .fifty-text-right
 } // .fifty-text-only

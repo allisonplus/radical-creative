@@ -4,7 +4,7 @@
 
 // Hamburger Nav
 .sliding-panel-button {
-	@include position(absolute, rem(5) rem(24) null null);
+	@include position(absolute, 5px 24px null null);
 
 	background-color: transparent;
 	padding: 0;
@@ -21,16 +21,16 @@
 	}
 
 	.admin-bar & {
-		@include position(absolute, rem(8) rem(24) null null);
+		@include position(absolute, 8px 24px null null);
 	}
 
 	// Global styles for Hamburger Lines.
 	.mobile-menu-bar {
-		@include size(rem(40) rem(5));
+		@include size(40px 5px);
 
 		background-color: $color-black;
 		display: block;
-		margin: rem(7) auto;
+		margin: 7px auto;
 		transition: all 0.3s ease-in-out;
 	}
 
@@ -69,14 +69,14 @@
 
 	// Container around primary nav.
 	.menu-primary-menu-container {
-		padding-top: rem(25);
+		padding-top: 25px;
 
 		@include media($tablet-landscape) {
 			padding-top: 0;
 		}
 
 		.admin-bar & {
-			padding-top: rem(75);
+			padding-top: 75px;
 
 			@include media($tablet-landscape) {
 				padding-top: 0;

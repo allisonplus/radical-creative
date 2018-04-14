@@ -20,7 +20,7 @@ input[type="submit"] {
 	border: none;
 	border-radius: 0;
 	color: $color-button-text;
-	min-height: rem(31);
+	min-height: 31px;
 	vertical-align: top;
 
 	&:hover {
@@ -80,7 +80,7 @@ textarea {
 	border: 1px solid $color-input-border;
 	border-radius: 0;
 	line-height: 1.45;
-	padding: rem(3) rem(5);
+	padding: 3px 5px;
 
 	&:focus {
 		color: $color-input-focus-text;

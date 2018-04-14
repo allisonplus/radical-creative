@@ -44,7 +44,7 @@
 // Copyright + Social Networks
 //--------------------------------------------------------------
 .site-footer {
-	padding-bottom: rem(20);
+	padding-bottom: 20px;
 
 	@include media($phone-landscape) {
 		padding-bottom: 0;
@@ -56,7 +56,7 @@
 	} // 	.site-info, .social-networks
 
 	.social-networks {
-		margin: rem(12) 0;
+		margin: 12px 0;
 	}
 
 	.site-info {

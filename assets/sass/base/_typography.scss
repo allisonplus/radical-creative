@@ -73,7 +73,7 @@ h4,
 
 p {
 	font-weight: 300;
-	margin: 0 0 rem(24) 0;
+	margin: 0 0 24px 0;
 }
 
 b,
@@ -90,7 +90,7 @@ i {
 
 blockquote,
 q {
-	margin: 0 rem(24);
+	margin: 0 24px;
 	quotes: "" "";
 
 	&:before,
@@ -100,17 +100,17 @@ q {
 }
 
 blockquote {
-	font-size: rem(22);
+	font-size: 22px;
 	line-height: 1.35;
-	margin-left: rem(75);
+	margin-left: 75px;
 	max-width: 80%;
-	padding-left: rem(42);
+	padding-left: 42px;
 	position: relative;
 
 	// Decorative circle w/ gradient.
 	&:before {
-		@include size(rem(65));
-		@include position(absolute, rem(5) null null rem(-38));
+		@include size(65px);
+		@include position(absolute, 5px null null -38px);
 
 		background: linear-gradient(to bottom, $color-grad-top 30%, $color-grad-bottom 85%);
 		border-radius: 50%;
@@ -120,17 +120,17 @@ blockquote {
 }
 
 address {
-	margin: 0 0 rem(24) 0;
+	margin: 0 0 24px 0;
 }
 
 pre {
 	font-family: $font-pre;
-	font-size: rem(15);
+	font-size: 15px;
 	line-height: $line-height-pre;
-	margin: 0 0 rem(24);
+	margin: 0 0 24px;
 	max-width: 100%;
 	overflow: auto;
-	padding: rem(24);
+	padding: 24px;
 }
 
 code,
@@ -138,7 +138,7 @@ kbd,
 tt,
 var {
 	font-family: $font-code;
-	font-size: rem(15);
+	font-size: 15px;
 }
 
 abbr,

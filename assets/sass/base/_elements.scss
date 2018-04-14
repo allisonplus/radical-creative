@@ -11,12 +11,12 @@ object {
 }
 
 hr {
-	@include size(rem(125));
+	@include size(125px);
 
 	background-image: url("assets/images/heart-page-break.jpg");
 	background-repeat: no-repeat;
 	border: none;
-	margin: 0 auto rem(15);
+	margin: 0 auto 15px;
 }
 
 figure {
@@ -29,7 +29,7 @@ ul,
 ol {
 	font-size: 20px;
 	font-weight: 300;
-	margin: 0 0 rem(48) rem(24);
+	margin: 0 0 48px 24px;
 }
 
 ul {
@@ -42,7 +42,7 @@ ol {
 
 li > ul,
 li > ol {
-	margin: 0 0 0 rem(24);
+	margin: 0 0 0 24px;
 }
 
 dt {
@@ -50,7 +50,7 @@ dt {
 }
 
 dd {
-	margin: 0 rem(24) rem(24) 0;
+	margin: 0 24px 24px 0;
 }
 
 // Tables
@@ -58,7 +58,7 @@ dd {
 table {
 	@include size(100% auto);
 
-	margin: 0 0 rem(24) 0;
+	margin: 0 0 24px 0;
 }
 
 th {

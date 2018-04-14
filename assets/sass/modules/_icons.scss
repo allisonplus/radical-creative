@@ -15,7 +15,7 @@
 
 			// Set styles on those social icons!
 			.icon-#{$social-color} {
-				@include size(rem(30) rem(30));
+				@include size(30px 30px);
 
 				fill: $color;
 
@@ -45,7 +45,7 @@
 	// Each social network.
 	.social-network {
 		display: inline-block;
-		margin-right: rem(5);
+		margin-right: 5px;
 
 		// No margin for the last <li> item
 		&:last-of-type {
@@ -68,7 +68,7 @@
 
 	// Icon itself.
 	.icon {
-		@include size(rem(24));
+		@include size(24px);
 
 		fill: $color-link;
 		transition: fill 0.15s ease-in-out;
