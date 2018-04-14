@@ -8,7 +8,6 @@
 	.grid-mindful {
 		display: flex;
 		flex-direction: column;
-		// flex-wrap: wrap;
 		justify-content: space-evenly;
 
 		@include media($tablet-portrait) {
