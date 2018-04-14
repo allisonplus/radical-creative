@@ -1,0 +1,39 @@
+//--------------------------------------------------------------
+// Mini-Mindfuls
+//--------------------------------------------------------------
+
+// Archive.
+.post-type-archive-mindfuls {
+
+	.grid-mindful {
+		display: flex;
+		flex-direction: column;
+		// flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		@include media($tablet-portrait) {
+			flex-direction: row;
+		}
+
+	}
+
+	article {
+		width: calc(100% / 4);
+
+		h2 {
+			margin: 0;
+		}
+
+		.featured-image {
+			display: inline-block;
+			font-size: 0;
+		}
+	}
+}
+
+// Single Mindful.
+.single-mindfuls {
+	.site-main {
+		text-align: center;
+	}
+}

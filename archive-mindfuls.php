@@ -23,6 +23,9 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
+				<div class="grid-mindful">
+
+
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
@@ -44,6 +47,7 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif; ?>
+				</div>
 
 			</main><!-- #main -->
 		</div><!-- .primary -->
