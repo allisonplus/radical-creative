@@ -16,7 +16,7 @@
 		width: 100%;
 
 		@include media($tablet-landscape) {
-			padding-top: rem(40);
+			padding-top: 40px;
 		}
 
 		&:last-child {
@@ -35,12 +35,12 @@
 	} // .entry-title
 
 	.entry-content {
-		margin-top: rem(20);
+		margin-top: 20px;
 	} // .entry-content
 
 	// Category links
 	.cat-links {
-		margin-right: rem(4);
+		margin-right: 4px;
 	} // .cat-links
 } // .blog
 
@@ -66,7 +66,7 @@
 	// Trigger for sidebar sliding out.
 	.sliding-panel-button {
 		@include position(absolute, 0 0 null null);
-		@include size( rem(32) rem(18));
+		@include size( 32px 18px );
 
 		cursor: pointer;
 		transform: rotate(0deg);
@@ -74,10 +74,10 @@
 
 		span {
 			@include position(absolute, null null null 0);
-			@include size(100% rem(4));
+			@include size(100% 4px);
 
 			background: $color-teal;
-			border-radius: rem(9);
+			border-radius: 9px;
 			display: block;
 			opacity: 1;
 			transform: rotate(0deg);
@@ -89,11 +89,11 @@
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				top: rem(9);
+				top: 9px;
 			}
 
 			&:nth-child(4) {
-				top: rem(18);
+				top: 18px;
 			}
 		} // span
 
@@ -104,7 +104,7 @@
 
 				&:nth-child(1),
 				&:nth-child(4) {
-					@include position(absolute, rem(18) null null 50%);
+					@include position(absolute, 18px null null 50%);
 
 					width: 0%;
 				}
@@ -129,10 +129,10 @@
 
 	.sidebar-wrapper {
 		background-color: $color-gallery;
-		padding: $gutter*2;
+		padding: $gutter * 2;
 
 		aside {
-			max-width: rem(375);
+			max-width: 375px;
 
 			@include media($desktop) {
 				margin: 0 auto;
@@ -154,12 +154,12 @@
 
 		// Close button once it slides out.
 		.sliding-panel-close {
-			@include position(absolute, rem(30) 10% null null);
+			@include position(absolute, 30px 10% null null);
 		}
 
 		// Content of wrapper.
 		&.sliding-panel-content {
-			@include position(fixed, rem(46) 0 0 auto);
+			@include position(fixed, 46px 0 0 auto);
 			@include size(75% 100%);
 
 			-webkit-overflow-scrolling: touch;
@@ -175,7 +175,7 @@
 			}
 
 			@include media($tablet-landscape) {
-				@include position(fixed, rem(80) 0 0 auto);
+				@include position(fixed, 80px 0 0 auto);
 				@include size(35% 100%);
 			}
 

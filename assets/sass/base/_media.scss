@@ -15,7 +15,7 @@
 
 // Images
 .figure {
-	margin: 0 0 rem(12);
+	margin: 0 0 12px;
 	overflow: hidden;
 
 	@include media($phone-landscape) {
@@ -31,7 +31,7 @@ img {
 
 // Captions
 .wp-caption {
-	margin: 0 0 rem(24) 0;
+	margin: 0 0 24px 0;
 	max-width: 100%;
 
 	img[class*="wp-image-"] {
@@ -41,21 +41,21 @@ img {
 
 	// Add auto margins so image is centered
 	&.aligncenter {
-		margin: 0 auto rem(24) auto;
+		margin: 0 auto 24px auto;
 	}
 
 	// Add a margin right to left-aligned images with captions
 	&.alignleft {
-		margin-right: rem(24);
+		margin-right: 24px;
 	}
 
 	// Add a margin left to right-aligned images with captions
 	&.alignright {
-		margin-left: rem(24);
+		margin-left: 24px;
 	}
 
 	.wp-caption-text {
-		margin: rem(12) 0;
+		margin: 12px 0;
 	}
 }
 
@@ -66,7 +66,7 @@ img {
 // Galleries
 
 .gallery {
-	margin: 0 0 rem(24) 0;
+	margin: 0 0 24px 0;
 }
 
 .gallery-item {

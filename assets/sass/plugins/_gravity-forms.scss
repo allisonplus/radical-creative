@@ -23,10 +23,10 @@ $gf-border-width: 0; // border-width on form
 $gf-border-color: $color-white; // border color
 
 // Fields / Rows
-$gf-field-margin-bottom: rem(25); // margin between field and label below (vertical spacing between rows)
+$gf-field-margin-bottom: 25px; // margin between field and label below (vertical spacing between rows)
 
 // Labels
-$gf-label-font-size: rem(16);
+$gf-label-font-size: 16px;
 $gf-label-font-color: $color-mineshaft;
 $gf-label-font-weight: 700;
 
@@ -85,7 +85,7 @@ $gf-input-padding: $padding-input;
 	select {
 		background: url(assets/images/svg-icons/caret-down.svg) no-repeat 97% transparent;
 		background-color: $gf-input-color-background;
-		background-size: rem(12);
+		background-size: 12px;
 		border-color: $gf-input-color-border;
 		border-radius: 0;
 		line-height: 1.45;
@@ -148,7 +148,7 @@ $gf-input-padding: $padding-input;
 //	CHOSEN SELECT
 //--------------------------------------------------------------
 .gform_wrapper .gfield .chosen-container-single {
-	font-size: rem(16);
+	font-size: 16px;
 
 	// Link holding initial selection - what user first sees
 	.chosen-single {
@@ -161,7 +161,7 @@ $gf-input-padding: $padding-input;
 
 	// Default state of icon for select
 	.chosen-single div b {
-		@include position(absolute, 40% rem(11) null null);
+		@include position(absolute, 40% 11px null null);
 		@include triangle(12px, $color-silver, down); // adjust size and color
 
 		background: none; // hide the default chosen background
@@ -177,7 +177,7 @@ $gf-input-padding: $padding-input;
 
 		// Search results list
 		.chosen-results li {
-			padding: rem(10) rem(5);
+			padding: 10px 5px;
 		}
 	}
 
