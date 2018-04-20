@@ -22,7 +22,7 @@ get_header(); ?>
 					</a>
 				<?php endif;
 
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'mindful-single' );
 
 			endwhile; // End of the loop.
 			?>
