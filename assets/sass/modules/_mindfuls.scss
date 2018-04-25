@@ -10,14 +10,22 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 
-		@include media($tablet-portrait) {
+		@include media($phone-landscape) {
 			flex-direction: row;
 		}
 
 	}
 
 	article {
-		width: calc(100% / 4);
+		width: 100%;
+
+		@include media($phone-landscape) {
+			width: calc((100% / 2) - 12px);
+		}
+
+		@include media($tablet-landscape) {
+			width: calc((100% / 4) - 12px);
+		}
 
 		h2 {
 			margin: 0;
