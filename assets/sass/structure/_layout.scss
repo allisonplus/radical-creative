@@ -1,0 +1,45 @@
+//--------------------------------------------------------------
+// Base Layout
+//--------------------------------------------------------------
+
+// Structure
+body {
+
+	&.sidebar-is-open {
+		overflow: hidden;
+	} // .sidebar-is-open
+}
+
+.wrap {
+	@include outer-container;
+
+	padding: 0 2 * $gutter;
+
+	@include media($desktop) {
+		padding: 0;
+	}
+} // .wrap
+
+.site-content {
+	margin: rem(20) auto;
+
+	@include media($desktop) {
+		margin: rem(20) auto rem(60);
+	}
+} // .site-content
+
+.primary {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(12);
+	}
+} // .primary
+
+.secondary {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(3.5);
+	}
+} // .secondary

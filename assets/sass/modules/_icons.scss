@@ -1,0 +1,80 @@
+//--------------------------------------------------------------
+// Icons
+//--------------------------------------------------------------
+
+// Social icons <ul>
+.social-icons {
+	@include clearfix;
+	@include list-reset;
+
+	// Each icon <li>
+	.social-icon {
+
+		// Loop through all social icons
+		@each $social-color, $color in $social-colors {
+
+			// Set styles on those social icons!
+			.icon-#{$social-color} {
+				@include size(30px 30px);
+
+				fill: $color;
+
+				&:hover {
+					fill: lighten($color, 20%);
+				}
+			}
+		}
+
+		// No margin for the last <li> item
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+//--------------------------------------------------------------
+// Social network icons gathered from customizer (includes email icon).
+//--------------------------------------------------------------
+.social-networks {
+	@include list-reset;
+
+	font-size: 0; //ghost-space killah.
+	line-height: 1;
+
+	// Each social network.
+	.social-network {
+		display: inline-block;
+		margin-right: 5px;
+
+		// No margin for the last <li> item
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		// Make links take up full space.
+		a {
+			display: block;
+			fill: $color-link;
+			font-size: 0; //ghost-space killah.
+			transition: fill 0.15s ease-in-out;
+
+			&:hover,
+			&:active {
+				fill: $color-link-hover;
+			}
+		} // a
+	} // .social-network
+
+	// Icon itself.
+	.icon {
+		@include size(24px);
+
+		fill: $color-link;
+		transition: fill 0.15s ease-in-out;
+
+		&:hover {
+			fill: $color-link-hover;
+		} // &:hover
+	} // .icon
+} // .social-networks

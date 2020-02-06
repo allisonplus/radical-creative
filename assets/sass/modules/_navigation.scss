@@ -1,0 +1,303 @@
+//--------------------------------------------------------------
+// Navigation
+//--------------------------------------------------------------
+
+// Links
+a {
+	color: $color-link;
+	text-decoration: none;
+
+	&:visited {
+		color: $color-link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-link-hover;
+		transition: color 0.2s ease;
+	}
+}
+
+.entry-content,
+.error-404 {
+
+	a:not(.button) {
+		box-shadow: inset 0 -0.1em 0 0 $color-silver;
+		color: $color-mineshaft;
+		transition-duration: 0.2s, 0.4s;
+		transition-property: box-shadow, color;
+		transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: inset 0 -0.25em 0 0 $color-aqua;
+			color: $color-black;
+		}
+	}
+
+	a.image-btn {
+		box-shadow: none;
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: none;
+			text-decoration: none;			
+		}
+	}
+}
+
+.button {
+	background-color: $color-teal;
+	border: 2px solid $color-teal;
+	border-radius: 3.5px;
+	color: $color-white;
+	display: inline-block;
+	font-family: $font-sans;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin: 10px 0;
+	padding: 10px 15px;
+	text-align: center;
+	transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken($color-teal, 11%);
+		border: 2px solid darken($color-teal, 11%);
+		color: $color-white;
+	} // &:hover, &:active, &:focus
+
+	&:visited {
+		color: $color-white;
+	} // &:visited
+} // .button
+
+// Read more link.
+.more-link {
+	border: 2px solid $color-link;
+	border-radius: 10px;
+	display: block;
+	margin: 15px 0;
+	max-width: 130px;
+	padding: 4px;
+	text-align: center;
+} // .more-link
+
+// Default menu (active after a fresh WordPress install)
+.menu {
+	@include list-reset;
+
+	text-align: right;
+
+	.navigation-wrapper & {
+		background-color: $color-white;
+		text-align: left;
+
+		@include media($tablet-landscape) {
+			text-align: center;
+		}
+	}
+
+	li {
+		letter-spacing: 1px;
+		margin: 0 10px 0 0;
+		padding: 12px 15px;
+		text-transform: uppercase;
+
+		@include media($tablet-landscape) {
+			font-size: 15px;
+			letter-spacing: 0.5px;
+			padding: 12px 3px;
+		}
+
+		@include media($desktop) {
+			font-size: 15px;
+			letter-spacing: 1px;
+			padding: 12px;
+		}
+
+		&:first-of-type {
+			@include media($tablet-landscape) {
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+
+		&:last-of-type {
+			@include media($tablet-landscape) {
+				margin-right: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&.menu-horizontal {
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	&.menu-vertical {
+
+		li {
+			margin: 0;
+		}
+
+		a {
+			border-bottom: 1px solid $color-background-hr;
+			padding: 10px;
+		}
+	}
+
+	&.dropdown {
+
+		// Sub-menu
+		ul {
+			box-shadow: 0 3px 3px rgba($color-black, 0.2);
+			float: left;
+			left: -999em;
+			position: absolute;
+			top: 24px;
+			z-index: 99999;
+
+			// Sub-sub menu
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			// Sub-menu items
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			// Sub-menu links
+			a {
+				@include size(200px auto);
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		// Display sub-menu on hover.
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+
+		// Menu items.
+		li {
+			display: inline-block;
+			position: relative;
+
+			&:hover > a,
+			&.focus > a {
+			}
+		}
+	}
+
+	// Menu hyperlinks.
+	a {
+		color: $color-mineshaft;
+		display: block;
+		padding: 2px 3px 0;
+		text-decoration: none;
+		transition: background-color 0.2s ease-in-out;
+
+		&:hover,
+		&:focus {
+			background-color: lighten($color-silver, 12%);
+		}
+	}
+
+	// Current items.
+	.current_page_item a,
+	.current-menu-item a {
+		border-bottom: 2px solid $color-aqua;
+
+		&:hover,
+		&:focus {
+			background-color: lighten($color-aqua, 40%);
+		}
+	}
+}
+
+// Main navigation (after creating a menu in the dashboard)
+.main-nav {
+	@include size(100% auto);
+
+	clear: both;
+	z-index: 99;
+
+	@include media($tablet-landscape) {
+		@include position(fixed, 0 0 null 0);
+
+		background-color: $color-white;
+		display: block;
+		padding: 0 $gutter;
+		width: 100%;
+	}
+
+	// When logged in.
+	.admin-bar & {
+		top: 32px;
+	}
+
+	// Contain nav items.
+	.menu-primary-menu-container {
+		@include outer-container;
+	}
+}
+
+// Class added when you scroll.
+.main-nav-scrolled {
+	@include position(fixed, 0 null null null);
+	@include fill-parent;
+
+	width: 100%;
+} // .main-nav-scrolled
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 24px 0;
+		overflow: hidden;
+	}
+
+	& .nav-previous {
+		@include size(50% auto);
+
+		float: left;
+	}
+
+	& .nav-next {
+		@include size(50% auto);
+
+		float: right;
+		text-align: right;
+	}
+}

@@ -1,0 +1,62 @@
+//--------------------------------------------------------------
+// Site Content
+//--------------------------------------------------------------
+
+// Posts and pages
+.entry-header {
+	text-align: center;
+}
+
+
+.entry-title {
+	margin-bottom: 12px;
+	margin-top: 0;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 24px 0;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.entry-footer {
+	margin-top: 30px;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 24px 0;
+}
+
+.edit-link {
+	margin: 0;
+}
+
+.cat-links {
+	margin-right: 24px;
+}
+
+// Asides
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}

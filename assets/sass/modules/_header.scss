@@ -1,0 +1,41 @@
+//--------------------------------------------------------------
+// Header
+//--------------------------------------------------------------
+.site-header {
+
+	.wrap {
+		padding-top: 48px;
+		position: relative;
+	}
+
+	.admin-bar & {
+
+		@include media($tablet-landscape) {
+			padding-top: 0;
+		}
+	}
+}
+
+.site-branding {
+	display: block;
+	font-size: 0;
+	text-align: center;
+
+	.banner-image {
+		display: inline-block;
+
+		img {
+			width: 325px;
+		}
+	}
+} // .site-branding
+
+.site-title {
+	font-size: 48px;
+	text-align: center;
+}
+
+.site-description {
+	font-size: 24px;
+	margin: 0 0 24px 0;
+}

@@ -1,0 +1,53 @@
+.page-shop {
+	.entry-title {
+		text-align: center;
+	}
+}
+
+.child-article-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.child-page {
+	width: 50%;
+
+	@include media($tablet-portrait, null) {
+		width: 50%;	
+	}
+
+	@include media($tablet-landscape, null) {
+		width: 25%;
+	}
+
+	&:first-of-type {
+		margin-right: 15px;
+	}
+
+	&:nth-of-type(4n+4) {
+		margin-right: 0;
+	}
+
+	a {
+		display: block;
+		transition: 0.2s all linear; 
+
+		&:hover {
+			background-color: #ebebeb;
+		}
+	}
+
+	h2,
+	h3 {
+		margin-top: 0;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+}

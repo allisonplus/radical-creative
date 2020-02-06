@@ -1,0 +1,2 @@
+[04-Dec-2018 19:37:35 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/radicap0/public_html/wp-content/themes/rcs/inc/customizer.php on line 95
+[05-Dec-2018 16:02:23 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home8/radicap0/public_html/wp-content/themes/rcs/inc/customizer.php on line 95

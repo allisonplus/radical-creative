@@ -1,0 +1,98 @@
+//--------------------------------------------------------------
+// Footer
+//--------------------------------------------------------------
+.footer {
+	// Widget area in footer.
+	&.widget-area {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+
+		@include media($tablet-portrait) {
+			align-items: center;
+			flex-direction: row;
+			text-align: left;
+		}
+
+		// Any components within footer (into thirds).
+		> div,
+		> aside {
+			width: 100%;
+
+			@include media($tablet-landscape) {
+				width: calc( (100% / 3 - (2*15px) ));
+			}
+		} // div, aside
+
+		> aside {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		// Titles of footer widgets.
+		.widget-title {
+			margin-top: 0;
+		} // .widget-title
+	} // &.widget-area
+} // .footer
+
+
+//--------------------------------------------------------------
+// Copyright + Social Networks
+//--------------------------------------------------------------
+.site-footer {
+	padding-bottom: 20px;
+
+	@include media($phone-landscape) {
+		padding-bottom: 0;
+	}
+
+	.site-info,
+	.social-networks {
+		text-align: center;
+	} // 	.site-info, .social-networks
+
+	.social-networks {
+		margin: 12px 0;
+	}
+
+	.site-info {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include media($phone-landscape) {
+			flex-direction: row;
+		}
+
+		.copyright-text,
+		.dev-info {
+			font-size: 14px;
+		}
+
+		.dev-info {
+			a {
+				box-shadow: inset 0 -0.1em 0 0 $color-silver;
+				color: $color-mineshaft;
+				transition-duration: 0.2s, 0.4s;
+				transition-property: box-shadow, color;
+				transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+				&:hover,
+				&:focus,
+				&:active {
+					box-shadow: inset 0 -0.25em 0 0 $color-aqua;
+					color: $color-black;
+				}
+			}
+		}
+
+		.heart {
+			color: $color-pink;
+		}
+	}
+} // .site-footer

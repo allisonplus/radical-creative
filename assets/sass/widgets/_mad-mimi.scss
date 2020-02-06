@@ -1,0 +1,94 @@
+//--------------------------------------------------------------
+// Mad Mimi newsletter sign-up
+//--------------------------------------------------------------
+
+.rcs-newsletter {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	@include media($phone-landscape) {
+		flex-direction: row;
+	}
+
+	@include media($tablet-portrait) {
+		padding: $gutter / 2 $gutter / 2;
+	}
+
+	@include media($tablet-landscape) {
+		align-items: flex-end;
+	}
+
+	// Title text before form markup.
+	h3 {
+		margin: rem(12) 0 0;
+	}
+
+	// Form.
+	form {
+
+		@include media($phone-landscape) {
+			margin-left: rem(32);
+		}
+	}
+} // .rcs-newsletter
+
+
+// *Mad Mimi sign-up*/
+.mimi_field {
+	display: inline-block;
+	width: 100%;
+
+	@include media($tablet-landscape) {
+		width: initial;
+	}
+
+	// All inputs within fields.
+	input {
+		border: none;
+		border: 1px solid $color-mineshaft;
+		padding: rem(8) 0 rem(8) rem(10);
+		width: 100%;
+
+		@include media($phone-landscape) {
+			// width: 50%;
+		}
+
+		@include media($tablet-landscape) {
+			width: initial;
+		}
+	}
+
+	// Labels.
+	label {
+		font-family: "Oswald", sans-serif;
+		font-size: rem(12);
+		letter-spacing: 1.4px;
+		text-transform: uppercase;
+	}
+
+	// Submit button.
+	input[type=submit] {
+		background-color: $color-aqua;
+		border: none;
+		color: $color-white;
+		display: block;
+		font-size: 12px;
+		letter-spacing: 1.4px;
+		margin-top: 10px;
+		padding: rem(11) rem(14);
+		text-transform: uppercase;
+
+		@include media($tablet-landscape) {
+			margin-top: 0;
+		}
+
+		// Submit hover.
+		&:hover {
+			background-color: $color-mineshaft;
+			color: $color-white;
+			transition: background-color 0.25s ease-in;
+		}
+	}
+}
