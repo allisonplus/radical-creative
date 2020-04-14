@@ -436,7 +436,7 @@ function rcs_do_blog_mobile_nav_menu() {
 function rcs_get_footer_social_links() {
 
 	// Set an array of social networks.
-	$social_networks = array( 'facebook', 'instagram' );
+	$social_networks = array( 'instagram' );
 	$email = get_theme_mod( 'rcs_email_link' );
 
 	ob_start(); ?>

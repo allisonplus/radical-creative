@@ -31,3 +31,20 @@
 	-webkit-font-smoothing: antialiased; // Control the application of anti-aliasing when fonts are rendered.
 	text-rendering: optimizeLegibility; // Improved kerning pairs & ligatures
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+

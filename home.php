@@ -17,18 +17,16 @@ get_header(); ?>
 				</div>
 
 				<?php
-				//while ( have_posts() ) : the_post();
+				while ( have_posts() ) : the_post();
 
-					$id = get_option('page_for_posts');
-					$podcast_intro = get_field( 'post_wysiwyg', $id);
-					
-					// echo '<div style="background:#eee;padding:1em;"><strong>$podcast_intro:</strong><hr><pre>', var_dump( $podcast_intro ), '</pre></div>';
+					// $id = get_option('page_for_posts');
+					// $podcast_intro = get_field( 'post_wysiwyg', $id);
 
-					echo wp_kses_post( the_field( 'post_wysiwyg', get_option('page_for_posts') ) );
+					// echo wp_kses_post( the_field( 'post_wysiwyg', get_option('page_for_posts') ) );
 
-					// get_template_part( 'template-parts/content', 'blog' );
+					get_template_part( 'template-parts/content', 'blog' );
 
-				//endwhile; // End of the loop.
+				endwhile; // End of the loop.
 				?>
 
 			</main><!-- #main -->

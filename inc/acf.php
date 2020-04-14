@@ -100,3 +100,31 @@ function rcs_get_shopify_item() {
 
 <?php
 }
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+	
+	// Check function exists.
+	if( function_exists('acf_register_block') ) {
+		
+		// Register a testimonial block.
+		acf_register_block(array(
+			'name'				=> 'testimonial',
+			'title'				=> __('Testimonial'),
+			'description'		=> __('A custom testimonial block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'testimonial', 'quote' ),
+		));
+	}
+}
+
+function my_acf_block_render_callback( $block ) {
+	
+	$slug = str_replace('acf/', '', $block['name']);
+
+	if( file_exists( get_theme_file_path("/template-parts/content-blocks/block-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/content-blocks/block-{$slug}.php") );
+	}
+}

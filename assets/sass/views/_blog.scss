@@ -12,6 +12,31 @@
 		position: relative;
 	} // .site-main
 
+	article {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include media($tablet-landscape) {
+			flex-direction: row;
+		}
+
+		.entry-header {
+			width: 30%;
+
+			img {
+				display: block;
+			}
+		}
+
+		.entry-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			width: 60%;
+		}
+	}
+
 	// Overwrites default for primary section on other pages.
 	.primary {
 		float: none;

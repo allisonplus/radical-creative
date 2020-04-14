@@ -79,6 +79,10 @@ function rcs_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	// Slider.
+	wp_enqueue_style( 'rcs-carousel-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+	wp_enqueue_script( 'rcs-carousel-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array( 'jquery' ) );
+
 	// Enqueue the mobile nav script
 	// Since we're showing/hiding based on CSS and wp_is_mobile is wp_is_imperfect, enqueue this everywhere.
 	wp_enqueue_script( 'rcs-mobile-nav', get_template_directory_uri() . '/assets/js/mobile-nav-menu' . $suffix . '.js', array( 'jquery' ), $version, true );
