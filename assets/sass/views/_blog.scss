@@ -1,7 +1,7 @@
 //--------------------------------------------------------------
 // Blog Template
 //--------------------------------------------------------------
-.blog {
+.page-blog {
 
 	p > a {
 		text-decoration: underline;
@@ -16,13 +16,22 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		align-items: center;
 
-		@include media($tablet-landscape) {
+		@include media($tablet-portrait) {
 			flex-direction: row;
 		}
 
+		&:not(:last-of-type) {
+			margin-bottom: 32px;
+		}
+
 		.entry-header {
-			width: 30%;
+			width: 50%;
+
+			@include media($tablet-portrait) {
+				width: 30%;
+			}
 
 			img {
 				display: block;
@@ -33,18 +42,22 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
+			margin-top: 15px;
 			width: 60%;
+
+			@include media($tablet-portrait) {
+				margin-top: 0;
+			}
 		}
 	}
 
 	// Overwrites default for primary section on other pages.
 	.primary {
-		float: none;
 		height: 100%;
 		margin: 0 auto;
-		width: 100%;
+		width: 70%;
 
-		@include media($tablet-landscape) {
+		@include media($tablet-portrait) {
 			padding-top: rem(40);
 		}
 
@@ -54,8 +67,10 @@
 	} // .primary
 
 	// Blog sidebar.
-	.secondary {
-		width: 100%;
+	.sidebar-wrapper {
+		float: left;
+		padding-left: 3%;
+		width: 20%;
 	} // .secondary
 
 	// Title of posts.
@@ -63,91 +78,10 @@
 		margin: 0;
 	} // .entry-title
 
-	.entry-content {
-		margin-top: rem(20);
-	} // .entry-content
-
-	// Category links
-	.cat-links {
-		margin-right: rem(4);
-	} // .cat-links
-} // .blog
-
-
-//--------------------------------------------------------------
-// Blog Nav
-//--------------------------------------------------------------
-.blog {
-	.blog-menu {
-
-		li:last-of-type {
-			margin-right: 0;
-		}
-	} // .blog-menu
-} // .blog
-
-
-//--------------------------------------------------------------
-// Nav Icon Animation
-//--------------------------------------------------------------
-.blog {
-
-	// Trigger for sidebar sliding out.
-	.sliding-panel-button {
-		@include position(absolute, 0 0 null null);
-		@include size( rem(32) rem(18));
-
-		cursor: pointer;
-		transform: rotate(0deg);
-		transition: 0.5s ease-in-out;
-
-		span {
-			@include position(absolute, null null null 0);
-			@include size(100% rem(4));
-
-			background: $color-teal;
-			border-radius: rem(9);
-			display: block;
-			opacity: 1;
-			transform: rotate(0deg);
-			transition: 0.25s ease-in-out;
-
-			&:nth-child(1) {
-				top: 0;
-			}
-
-			&:nth-child(2),
-			&:nth-child(3) {
-				top: rem(9);
-			}
-
-			&:nth-child(4) {
-				top: rem(18);
-			}
-		} // span
-
-		// Animation when sidebar open/closes.
-		&.open {
-
-			span {
-
-				&:nth-child(1),
-				&:nth-child(4) {
-					@include position(absolute, rem(18) null null 50%);
-
-					width: 0%;
-				}
-
-				&:nth-child(2) {
-					transform: rotate(45deg);
-				}
-
-				&:nth-child(3) {
-					transform: rotate(-45deg);
-				}
-			} // span
-		} // .open
-	} // .nav-icon
+	.thumbnail-filler {
+		background: linear-gradient(to top, #80f9e2, #7d90f9 70%);
+		height: 189px;
+	}
 } // .blog
 
 

@@ -62,7 +62,7 @@ a {
 	margin: 10px 0;
 	padding: 10px 15px;
 	text-align: center;
-	transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+	transition: background-color 0.2s linear, border 0.2s linear;
 
 	&:hover,
 	&:active,
@@ -79,13 +79,18 @@ a {
 
 // Read more link.
 .more-link {
-	border: 2px solid $color-link;
 	border-radius: 10px;
+	border: none;
 	display: block;
 	margin: 15px 0;
 	max-width: 130px;
 	padding: 4px;
 	text-align: center;
+
+	&:hover,
+	&:focus {
+		border: none;
+	}
 } // .more-link
 
 // Default menu (active after a fresh WordPress install)
