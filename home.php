@@ -33,7 +33,7 @@ get_header(); ?>
 		</div><!-- .primary -->
 
 		<div class="sidebar-wrapper sliding-panel-content">
-			<?php dynamic_sidebar( 'sidebar-3' ); ?>
+			<?php //dynamic_sidebar( 'sidebar-3' ); ?>
 		</div> <!--/.sidebar-wrapper-->
 	</div><!-- .wrap -->
 

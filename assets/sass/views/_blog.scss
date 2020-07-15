@@ -98,10 +98,11 @@
 		width: 30%;
 
 		aside {
+			margin-bottom: 15px;
 			max-width: rem(375);
 
 			@include media($desktop) {
-				margin: 0 auto;
+				margin: 0 auto 30px;
 				max-width: 90%;
 			}
 		}
