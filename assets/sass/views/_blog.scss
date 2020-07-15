@@ -55,7 +55,7 @@
 	.primary {
 		height: 100%;
 		margin: 0 auto;
-		width: 70%;
+		width: 65%;
 
 		@include media($tablet-portrait) {
 			padding-top: rem(40);
@@ -68,9 +68,9 @@
 
 	// Blog sidebar.
 	.sidebar-wrapper {
-		float: left;
-		padding-left: 10%;
-		width: 30%;
+		// float: left;
+		// padding-left: 10%;
+		// width: 30%;
 	} // .secondary
 
 	// Title of posts.
@@ -88,11 +88,14 @@
 //--------------------------------------------------------------
 // Blog sidebar content
 //--------------------------------------------------------------
-.blog {
+.page-blog {
 
 	.sidebar-wrapper {
 		background-color: $color-gallery;
+		float: left;
+		margin-left: 5%;
 		padding: $gutter*2;
+		width: 30%;
 
 		aside {
 			max-width: rem(375);
@@ -104,74 +107,3 @@
 		}
 	}
 }
-
-
-//--------------------------------------------------------------
-// Sliding effect of blog sidebar
-//--------------------------------------------------------------
-.blog {
-
-	// Wrapper around sidebar as a whole.
-	.sidebar-wrapper {
-		position: relative;
-
-		// Close button once it slides out.
-		.sliding-panel-close {
-			@include position(absolute, rem(30) 10% null null);
-		}
-
-		// Content of wrapper.
-		&.sliding-panel-content {
-			@include position(fixed, rem(46) 0 0 auto);
-			@include size(75% 100%);
-
-			-webkit-overflow-scrolling: touch;
-			-webkit-transform: translateX(100%); // fixes on Safari 8
-			overflow-y: auto;
-			transform: translateX(100%);
-			transition: all 0.25s linear;
-			z-index: 9999;
-
-			// Change that width as screens get bigger.
-			@include media($tablet-portrait) {
-				@include size(50% 100%);
-			}
-
-			@include media($tablet-landscape) {
-				@include position(fixed, rem(80) 0 0 auto);
-				@include size(35% 100%);
-			}
-
-			@include media($large-desktop) {
-				@include size(25% 100%);
-			}
-
-			// Make it appear!
-			&.is-visible {
-				-webkit-transform: translateX(0); // fixes on Safari 8
-				transform: translateX(0);
-			} // &.is-visible
-		} // .sliding-panel-content
-	} // .sidebar-wrapper
-
-	// Move primary content over as well when sidebar slides out.
-	.primary,
-	.menu-primary-menu-container,
-	.footer {
-		transition: all 0.25s linear;
-
-		&.is-visible {
-			transform: translate3d(-85%, 0, 0);
-
-			@include media($tablet-portrait) {
-				-webkit-transform: translate3d(-55%, 0, 0);
-				transform: translate3d(-55%, 0, 0);
-			}
-
-			@include media($tablet-landscape) {
-				-webkit-transform: translate3d(-40%, 0, 0);
-				transform: translate3d(-40%, 0, 0);
-			}
-		} // &.is-visible
-	} // .primary, .menu-primary-menu-container, .site-footer
-} // .blog
