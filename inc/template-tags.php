@@ -274,7 +274,7 @@ function rcs_get_post_image_uri( $size = 'thumbnail' ) {
 }
 
 /**
- * Get an attachment ID from it's URL.
+ * Get an attachment ID from its URL.
  *
  * @param  string $attachment_url  The URL of the attachment.
  * @return int                     The attachment ID.
