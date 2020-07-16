@@ -16,7 +16,12 @@
 		left: -65px;
 	}
 	.flickity-prev-next-button.next {
-	 	right: -65px;
+		display: none;
+		right: -65px;
+
+		@include media($tablet-landscape, null) {
+			display: inline-block;
+		}
 	}
 }
 
