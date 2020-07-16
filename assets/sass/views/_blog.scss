@@ -26,6 +26,11 @@
 			margin-bottom: 32px;
 		}
 
+		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+		}
+
+
 		.entry-header {
 			width: 50%;
 
@@ -66,13 +71,6 @@
 		} // &:last-child
 	} // .primary
 
-	// Blog sidebar.
-	.sidebar-wrapper {
-		// float: left;
-		// padding-left: 10%;
-		// width: 30%;
-	} // .secondary
-
 	// Title of posts.
 	.entry-title {
 		margin: 0;
@@ -88,23 +86,23 @@
 //--------------------------------------------------------------
 // Blog sidebar content
 //--------------------------------------------------------------
-.page-blog {
+// .page-blog {
 
-	.sidebar-wrapper {
-		background-color: $color-gallery;
-		float: left;
-		margin-left: 5%;
-		padding: $gutter*2;
-		width: 30%;
+// 	.sidebar-wrapper {
+// 		background-color: $color-gallery;
+// 		float: left;
+// 		margin-left: 5%;
+// 		padding: $gutter*2;
+// 		width: 30%;
 
-		aside {
-			margin-bottom: 15px;
-			max-width: rem(375);
+// 		aside {
+// 			margin-bottom: 15px;
+// 			max-width: rem(375);
 
-			@include media($desktop) {
-				margin: 0 auto 30px;
-				max-width: 90%;
-			}
-		}
-	}
-}
+// 			@include media($desktop) {
+// 				margin: 0 auto 30px;
+// 				max-width: 90%;
+// 			}
+// 		}
+// 	}
+// }
