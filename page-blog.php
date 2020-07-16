@@ -12,9 +12,6 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="primary content-area">
 			<main id="main" class="site-main" role="main">
-				<div class="js-menu-trigger sliding-panel-button">
-					<span></span><span></span><span></span><span></span>
-				</div>
 
 				<?php 
 
@@ -40,9 +37,9 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- .primary -->
 
-		<div class="sidebar-wrapper sliding-panel-content">
-			<?php dynamic_sidebar( 'sidebar-3' ); ?>
-		</div> <!--/.sidebar-wrapper-->
+		<!-- <div class="sidebar-wrapper sliding-panel-content"> -->
+			<?php // dynamic_sidebar( 'sidebar-3' ); ?>
+		<!-- </div> /.sidebar-wrapper -->
 	</div><!-- .wrap -->
 
 <?php get_footer(); ?>

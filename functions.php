@@ -49,7 +49,7 @@ if ( ! function_exists( 'rcs_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary Menu', 'rcs' ),
-			'blog'    => esc_html__( 'Blog Menu', 'rcs' ),
+			// 'blog'    => esc_html__( 'Blog Menu', 'rcs' ),
 			'mobile'  => esc_html__( 'Optional Mobile Menu', 'rcs' ),
 		) );
 
@@ -99,7 +99,7 @@ function rcs_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'sidebar-3' => esc_html__( 'Blog Sidebar', 'rcs' ),
+		// 'sidebar-3' => esc_html__( 'Blog Sidebar', 'rcs' ),
 		'sidebar-2' => esc_html__( 'Footer', 'rcs' ),
 	);
 
